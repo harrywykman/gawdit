@@ -1,0 +1,23 @@
+import datetime
+
+from django.db import models
+from django.utils import timezone
+from embed_video.fields import EmbedVideoField
+
+class TimelapseProject(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __unicode__(self):
+        return "Timelapse Project: %s" % (self.name)
+
+class TimelapseVideo(models.Model):
+    timelapse = models.ForeignKey(TimelapseProject, null=True)
+    date_created = models.DateField('date timelapse created', default=timezone.now)
+    name = models.CharField(max_length=100)
+    video = EmbedVideoField()
+
+class TimelapseImage(models.Model):
+    timelapse = models.ForeignKey(TimelapseProject, null=True)
+    date_created = models.DateField('date image created', default=timezone.now)
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to="timelapse_images")

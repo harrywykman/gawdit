@@ -1,4 +1,3 @@
-
 from __future__ import absolute_import, unicode_literals
 import os
 from django.utils.translation import ugettext_lazy as _
@@ -90,7 +89,7 @@ USE_MODELTRANSLATION = False
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -204,6 +203,11 @@ TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 ################
 
 INSTALLED_APPS = (
+    "djcelery",
+    "debug_toolbar",
+    "timelapse",
+    "data_garden_theme",
+    "embed_video",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -319,3 +323,10 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+###################
+# Celery Settings #
+###################
+
+#CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend',
+

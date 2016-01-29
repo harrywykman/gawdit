@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load embed_video_tags %}
+
+
+{% block meta_title %}{% trans "Timelapse" %}{% endblock %}
+{% block title %}{% trans "Timelapse" %}{% endblock %}
+{% block title-tagline %}{{ project.name }}{% endblock %}
+{% block details %}
+<p><strong>image capture interval:</strong> {{ project.interval }}</h3>
+<p><strong>total number of frames:</strong> {{ project.number_frames }}</p>
+<p><strong>calculated video duration:</strong> {{ project.duration }} </p>
+{% endblock %}
+
+{% block commands %}
+    <p><a href="{% url "timelapse:capture_img" project.id %}">CAPTURE IMAGE</a></p>
+    <p><a href="{% url "timelapse:start_timelapse" project.id %}">START TIMELAPSE</a></p>
+{% endblock %}
+
+{% block main %}
+{% if project.video %}
+
+    {% for vid in project.video %}
+        <h2>Video <small>{{ vid.start_date }} &mdash; {{ vid.end_date }}</small></h2>
+        {% video vid.video "medium"  %}
+    {% endfor %}
+{% else %}
+    <h2>Video</h2>
+    <p>No Video.</p>
+{% endif %}
+
+{% if project.latest_image %}
+    <h2>Latest Image <small>{{ project.latest_image.date_created }}</small></h2>
+        <img class="img-responsive" src="{{ project.latest_image.image.url }}" />
+{% else %}
+    <h2>Latest Image</h2>
+    <p>No Images.</p>
+{% endif %}
+
+{% endblock %}

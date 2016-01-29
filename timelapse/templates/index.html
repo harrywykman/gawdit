@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load embed_video_tags %}
+
+
+{% block meta_title %}{% trans "Nursery Records" %}{% endblock %}
+{% block title %}{% trans "Nursery Records" %}{% endblock %}
+{% block title-tagline %}{% endblock %}
+
+{% block main %}
+
+{% if timelapse %}
+    {% video video.video 'small' %}
+{% else %}
+    <p>No Video.</p>
+{% endif %}
+
+{% endblock %}

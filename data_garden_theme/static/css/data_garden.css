@@ -1,0 +1,217 @@
+.dropdown-menu {
+    font-size: 1.2em;
+}
+
+.title-tagline {
+    font-family: 'Roboto', italic;
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 1.25em;
+    font-style: italic;
+    /* text-align: right; */
+}
+
+.navbar-default {
+    font-family: 'Montserrat Alternates', serif;
+    background-color: #ffffff;
+    background-image: none;
+    background-repeat: none;
+    border-radius: 0px;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+
+.navbar-default .navbar-nav > .active > a {
+    color: #333;
+    background-color: #ffffff;
+    background-image: none;
+    background-repeat: none;
+    box-shadow: none;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #333;
+    background-color: #ecf0ec; 
+}
+
+.navbar-default .navbar-nav > a:hover {
+    color: #555;
+}
+
+.navbar-default .navbar-nav > li > a {
+    font-family: 'Montserrat Alternates', serif; 
+    color: #333;
+/*    font-family: 'Roboto Slab', serif; */
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+a {
+    color: #000080;
+}
+
+.container.content {
+    margin-top: 3em;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat Alternates', serif;
+    font-weight: 700;
+/*    font-family: 'Roboto Slab', serif;
+    font-weight: 700; */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+/*    font-family: 'Montserrat Alternates', sans-serif; */
+/*    font-size: 16px; */
+    padding-top: 70px;
+}
+
+table {
+    font-family: 'Roboto Mono';
+    font-weight: 300;
+    font-size: 0.85em;
+}
+
+.title {
+
+    border-top: 2px solid #000;
+    padding-top: 6px;
+    padding-bottom: 6px;
+ /*   text-align: right; */
+}
+
+.title h1 {
+
+    font-size: 3em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+
+/*
+
+a:link .subscribe, a:visited .subscribe {
+    color: #333333;
+}
+
+a:hover .subscribe {
+    color: #000080
+}
+
+.float-right {
+    float: right;
+}
+
+.subscribe {
+    padding: 10px 15px;
+}
+
+a span.fa.fa-twitter, a span.fa.fa-facebook {
+    font-size: 1.4em;
+    color: #333333;
+}
+
+.figure {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+
+    color: #555;
+    background-color: #ecf0ec;
+
+}
+
+.mono {
+    font-family: 'Inconsolata';
+    font-size: 1.2em;
+}
+
+.navbar-default .navbar-nav > .active > a {
+    background-color: #ecf0ec;
+    background-image: none;
+    background-repeat: none;
+    box-shadow: none;
+}
+
+.navbar-fixed-top {
+    border-width: 10px 0px 0px;
+}
+.navbar-default {
+    background-color: #ecf0ec;
+    background-image: none;
+    background-repeat: none;
+    border-radius: 4px;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.recent-posts li {
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px dashed #CCC;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #aa3333;
+    font-family: 'Unica One';
+    font-size: 2em;
+}
+
+a {
+    color: #000080;
+}
+
+h1, h2, h3, h4 {
+    color: #aa3333;
+    font-family: 'Unica One';
+}
+
+h1 {
+}
+
+h1.home {
+    font-family: 'Pacifico';
+    color: #333;
+    font-size: 8em;
+    text-align: center;
+    line-height: 0.8em;
+    margin-top: 0.4em;
+    margin-bottom: 1em;
+}
+
+
+@media only screen and (max-width: 768px) {
+    h1.home {
+        font-size:5em;
+    }
+
+    .col-md-7 {
+        width: 600px
+    }
+
+
+}
+
+@media only screen and (max-width: 320px) {
+    h1.home {
+        font-size:1em;
+    }
+}
+
+body {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    background-color: #ecf0ec;
+    padding-top: 70px;
+}
+
+.intext {
+    max-width: 300px;
+    padding: 0px 20px 20px 20px;
+}
+
+*/

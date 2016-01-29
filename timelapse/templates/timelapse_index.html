@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load embed_video_tags %}
+
+
+{% block meta_title %}{% trans "Timelapse" %}{% endblock %}
+{% block title %}{% trans "Timelapse" %}{% endblock %}
+{% block title-tagline %}{% endblock %}
+
+{% block main %}
+
+{% if projects %}
+    <table class="table table-responsive table-hover">                                         
+        <thead>                                                                                
+            <tr>                                                                               
+                <th>{{ set.name }}</th>                                                        
+            </tr>                                                                              
+        </thead>                                                                               
+        <tbody>   
+    {% for project in projects %}
+            <tr>
+                <td><a href={% url 'timelapse:timelapse_detail' project.id %}>{{ project }}</a></td>
+            </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No Projects.</p>
+{% endif %}
+
+{% endblock %}
