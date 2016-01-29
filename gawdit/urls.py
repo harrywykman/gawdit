@@ -75,6 +75,7 @@ urlpatterns += patterns('',
     # from it, and use them directly below instead of using
     # ``mezzanine.urls``.
     url(r'^timelapse/', include('timelapse.urls', namespace="timelapse")),
+    url(r'^accounts/', include('accounts.urls', namespace='accounts')),
     ("^", include("mezzanine.urls")),
 
     # MOUNTING MEZZANINE UNDER A PREFIX

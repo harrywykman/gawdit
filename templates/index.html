@@ -3,7 +3,16 @@
 
 {% block meta_title %}{% trans "Gawdit" %}{% endblock %}
 {% block title %}{% trans "Gawdit" %}{% endblock %}
-{% block title-tagline %}capturing life{% endblock %}
+{% block title-tagline %}capturing life <br/><br/> <small><a href="{% url 'accounts:login' %}">login</a></small>
+{% endblock %}
+{% block login %}
+    {% if request.user.is_authenticated %}
+        <p>Welcome, {{ user.username }}  <a href="{% url 'accounts:logout' %}">[logout]</a></p>
+    {% else %}
+        <p>Welcome, Guest <a href="{% url 'accounts:login' %}">[login]</a></p>
+    {% endif %}
+    blah<a href="{% url 'accounts:login' %}">[login]</a></p>
+{% endblock %}
 
 {% block breadcrumb_menu %}
 <li class="active">{% trans "Gawdit" %}</li>

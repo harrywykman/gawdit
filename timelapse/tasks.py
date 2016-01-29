@@ -67,6 +67,7 @@ def capture_image(project, number):
 def capture_timelapse(project):
     for n in range(project.number_frames):
         capture_image(project, n)
+        print "image %s captured" % (n)
         time.sleep(project.interval)
 
 @shared_task
@@ -125,7 +126,12 @@ def set_remote_video_title(access_token, video_uri, title):
     return requests.patch("https://api.vimeo.com%s" % (video_uri), data=payload, headers=auth_headers)
 
 @shared_task
-def timelapse(project):
+def timelapse_capture(project):
+    capture_timelapse(project)
+    create_timelapse(project)
+
+@shared_task
+def timelapse_capture_push(project):
     capture_timelapse(project)                                                                         
     create_timelapse_video(project)                                                                    
     push_to_vimeo(project) 

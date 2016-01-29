@@ -9,12 +9,16 @@
 {% block details %}
 <p><strong>image capture interval:</strong> {{ project.interval }}</h3>
 <p><strong>total number of frames:</strong> {{ project.number_frames }}</p>
-<p><strong>calculated video duration:</strong> {{ project.duration }} </p>
+<p><strong>timelapse runtime:</strong> {{ project.timelapse_runtime }} </p>
+<p><strong>calculated video duration:</strong> {{ project.duration_video }} </p>
+<p><strong>video file?:</strong> {{ project.video_file_exists }} </p>
 {% endblock %}
 
 {% block commands %}
-    <p><a href="{% url "timelapse:capture_img" project.id %}">CAPTURE IMAGE</a></p>
-    <p><a href="{% url "timelapse:start_timelapse" project.id %}">START TIMELAPSE</a></p>
+    <p><a href="{% url "timelapse:image_capture" project.id %}">CAPTURE IMAGE</a></p>
+    <p><a href="{% url "timelapse:capture_timelapse" project.id %}">CAPTURE TIMELAPSE</a></p>
+    <p><a href="{% url "timelapse:push_timelapse" project.id %}">PUSH TO VIMEO</a></p>
+    <p><a href="{% url "timelapse:capture_push_timelapse" project.id %}">CAPTURE AND PUSH TIMELAPSE</a></p>
 {% endblock %}
 
 {% block main %}

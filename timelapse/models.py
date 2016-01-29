@@ -1,4 +1,5 @@
 import datetime
+import os
 
 from django.db import models
 from django.utils import timezone
@@ -12,14 +13,29 @@ class TimelapseProject(models.Model):
     fps = models.IntegerField(default=25)
     #video_length = models.IntegerField("Length of timelapse video in minutes",default=1, null=True)
 
-    def duration(self):
-        seconds = self.number_frames / self.fps
+    def video_file_exists(self):
+        # TODO should not be hardcoded
+        base = os.path.split(os.path.dirname(os.path.realpath(__file__)))[0]
+        path = "%s/timelapse_video/%s/%s.mp4" % (base, self.name, self.name)
+#        return os.path.split(os.path.dirname(os.path.realpath(__file__)))[0]
+ #       return os.path.split(path)[0]
+        return os.path.exists(path)
+
+    def seconds_to_hms(self, seconds):
         print "seconds: %s" % (seconds)
         m, s = divmod(seconds, 60)
         print "m: %s; s: %s" % (m, s)
         h, m = divmod(m, 60)
         print "h: %s; m: %s" % (h, m)
         return datetime.time(h, m, s).strftime("%H:%M:%S")
+
+    def timelapse_runtime(self):
+        seconds = self.interval * self.number_frames
+        return self.seconds_to_hms(seconds)
+
+    def duration_video(self):
+        seconds = self.number_frames / self.fps
+        return self.seconds_to_hms(seconds)
 
     def latest_image(self):
         return self.timelapseimage_set.latest("date_created")

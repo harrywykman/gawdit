@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 
 from timelapse.models import TimelapseProject, TimelapseImage, TimelapseVideo
 from timelapse.tasks import (capture_image, capture_timelapse,
-        create_timelapse_video, push_to_vimeo, timelapse)
+        create_timelapse_video, push_to_vimeo, timelapse_capture_push, timelapse_capture)
 
 @login_required
 def timelapse_index(request):
@@ -23,6 +23,21 @@ def timelapse_detail(request, pk):
     return render(request, "timelapse_deets.html",
             {'project': project,})
 
+
+@login_required
+def capture_timelapse(request, pk):
+    project = get_object_or_404(TimelapseProject, pk=pk)
+    timelapse_capture.delay(project)
+    messages.success(request, """ Timelapse started. """ )
+    return HttpResponseRedirect(reverse('timelapse:timelapse_detail', args=(project.pk,)))
+
+@login_required
+def push_timelapse(request, pk):
+    project = get_object_or_404(TimelapseProject, pk=pk)
+    push_to_vimeo.delay(project)
+    messages.success(request, """ Pushing timelapse to Vimeo. """ )
+    return HttpResponseRedirect(reverse('timelapse:timelapse_detail', args=(project.pk,)))
+
 @login_required
 def capture_img(request, pk):
     project = get_object_or_404(TimelapseProject, pk=pk)
@@ -31,8 +46,8 @@ def capture_img(request, pk):
     return HttpResponseRedirect(reverse('timelapse:timelapse_detail', args=(project.pk,)))
 
 @login_required
-def start_timelapse(request, pk):
+def capture_push_timelapse(request, pk):
     project = get_object_or_404(TimelapseProject, pk=pk)
-    timelapse.delay(project)
+    timelapse_capture_push.delay(project)
     messages.success(request, """ Timelapse started. """ )
     return HttpResponseRedirect(reverse('timelapse:timelapse_detail', args=(project.pk,)))
