@@ -17,6 +17,7 @@
 {% block commands %}
     <p><a href="{% url "timelapse:image_capture" project.id %}">CAPTURE IMAGE</a></p>
     <p><a href="{% url "timelapse:capture_timelapse" project.id %}">CAPTURE TIMELAPSE</a></p>
+    <p><a href="{% url "timelapse:create_timelapse" project.id %}">CREATE VIDEO</a></p>
     <p><a href="{% url "timelapse:push_timelapse" project.id %}">PUSH TO VIMEO</a></p>
     <p><a href="{% url "timelapse:capture_push_timelapse" project.id %}">CAPTURE AND PUSH TIMELAPSE</a></p>
 {% endblock %}

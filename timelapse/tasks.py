@@ -13,6 +13,7 @@ from moviepy.editor import *
 
 from django.core.files import File
 from django.utils import timezone
+from django.conf import settings
 
 from .models import (
                     TimelapseProject, TimelapseImage, TimelapseVideo
@@ -27,6 +28,8 @@ FRAMES = 25
 FILETYPE = "jpg"
 INTERVAL = 20 
 NUMBER_FRAMES = 1440
+IMAGE_PATH = "%s/timelapse_images/" % (settings.MEDIA_ROOT)
+VIDEO_PATH = "%s/timelapse_video/" % (settings.MEDIA_ROOT)
 
 
 def new_timelapse_project(name, internal, number_frames):
@@ -52,9 +55,11 @@ def capture_image(project, number):
     #print now_str
     name = project.name
     #print name
+    if not os.path.exists(IMAGE_PATH):
+        call(["mkdir", IMAGE_PATH])
     image_number = str(number).zfill(7)
-    call(["mkdir", "./timelapse_images/%s/" % (name)])
-    path = "./timelapse_images/%s/" % (name)
+    path = "%s%s/" % (IMAGE_PATH, name)
+    call(["mkdir", path])
     filename = "%s_%s.jpg" % (name, image_number)
     call(["fswebcam", "-r", "1280x720", "--no-banner", "%s%s" % (path, filename)])
     image = File(open('%s%s' % (path, filename), 'r'))
@@ -75,9 +80,12 @@ def create_timelapse_video(project):
     frames = FRAMES
     filetype = FILETYPE
     name = project.name
-    img_path = "./timelapse_images/%s/" % (name)
-    video_path = "./timelapse_video/%s/" % (name)
-    call(["mkdir", "./timelapse_video/%s/" % (name)])
+    img_path = "%s%s/" % (IMAGE_PATH, name)
+    video_path = "%s%s/" % (VIDEO_PATH, name)
+    print video_path
+    if not os.path.exists(VIDEO_PATH):
+        call(["mkdir", VIDEO_PATH])
+    call(["mkdir", "%s%s/" % (VIDEO_PATH, name)])
     call(["ffmpeg", "-y", "-r", "%s" % (project.fps), "-pattern_type", "glob", "-i",
           "%s*.%s" % (img_path, filetype), "-vcodec",
           "libx264", "%s%s.mp4" % (video_path, name)])
@@ -107,7 +115,8 @@ def add_project_to_images(project):
 @shared_task
 def push_to_vimeo(project):
     v = vimeo.VimeoClient(token=ACCESS_TOKEN, key=CLIENT_ID, secret=CLIENT_SECRET)
-    filename = "./timelapse_video/%s/%s.mp4" % (project.name, project.name)
+    filename = "%s%s/%s.mp4" % (VIDEO_PATH, project.name, project.name)
+    print filename
     uri = v.upload(filename)
     ref = uri.split('/')[2]
     url = "http://vimeo.com/%s/" % (ref)
@@ -128,7 +137,7 @@ def set_remote_video_title(access_token, video_uri, title):
 @shared_task
 def timelapse_capture(project):
     capture_timelapse(project)
-    create_timelapse(project)
+    create_timelapse_video(project)
 
 @shared_task
 def timelapse_capture_push(project):

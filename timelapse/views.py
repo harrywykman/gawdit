@@ -23,12 +23,18 @@ def timelapse_detail(request, pk):
     return render(request, "timelapse_deets.html",
             {'project': project,})
 
-
 @login_required
 def capture_timelapse(request, pk):
     project = get_object_or_404(TimelapseProject, pk=pk)
     timelapse_capture.delay(project)
     messages.success(request, """ Timelapse started. """ )
+    return HttpResponseRedirect(reverse('timelapse:timelapse_detail', args=(project.pk,)))
+
+@login_required
+def create_timelapse(request, pk):
+    project = get_object_or_404(TimelapseProject, pk=pk)
+    create_timelapse_video.delay(project)
+    messages.success(request, """ Creating Video. """ )
     return HttpResponseRedirect(reverse('timelapse:timelapse_detail', args=(project.pk,)))
 
 @login_required

@@ -3,7 +3,11 @@ import os
 
 from django.db import models
 from django.utils import timezone
+from django.conf import settings
+
 from embed_video.fields import EmbedVideoField
+
+VIDEO_PATH = "%s/timelapse_video/" % (settings.MEDIA_ROOT)
 
 class TimelapseProject(models.Model):
     date_created = models.DateTimeField('date project created', default=timezone.now)
@@ -15,8 +19,8 @@ class TimelapseProject(models.Model):
 
     def video_file_exists(self):
         # TODO should not be hardcoded
-        base = os.path.split(os.path.dirname(os.path.realpath(__file__)))[0]
-        path = "%s/timelapse_video/%s/%s.mp4" % (base, self.name, self.name)
+        #base = os.path.split(os.path.dirname(os.path.realpath(__file__)))[0]
+        path = "%s/%s/%s.mp4" % (VIDEO_PATH, self.name, self.name)
 #        return os.path.split(os.path.dirname(os.path.realpath(__file__)))[0]
  #       return os.path.split(path)[0]
         return os.path.exists(path)

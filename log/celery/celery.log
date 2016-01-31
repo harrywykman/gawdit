@@ -1,0 +1,786 @@
+[2016-01-30 17:32:47,386: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-30 17:32:47,542: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-30 17:32:47,559: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-30 17:32:48,580: INFO/MainProcess] mingle: all alone
+[2016-01-30 17:32:48,647: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-30 17:32:48,647: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-30 17:32:48,737: INFO/MainProcess] Events of group {task} enabled by remote.
+[2016-01-30 17:34:42,201: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-30 17:34:42,222: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-30 17:34:42,230: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-30 17:34:43,242: INFO/MainProcess] mingle: all alone
+[2016-01-30 17:34:43,266: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-30 17:34:43,266: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-30 17:34:43,738: INFO/MainProcess] Events of group {task} enabled by remote.
+[2016-01-31 10:38:04,645: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-31 10:38:04,706: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-31 10:38:04,716: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-31 10:38:05,728: INFO/MainProcess] mingle: all alone
+[2016-01-31 10:38:05,789: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-31 10:38:05,790: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-31 10:39:35,681: INFO/MainProcess] Received task: timelapse.tasks.capture_image[735acbd0-7a7a-4058-aff5-72bdddce197e]
+[2016-01-31 10:39:38,148: ERROR/MainProcess] Task timelapse.tasks.capture_image[735acbd0-7a7a-4058-aff5-72bdddce197e] raised unexpected: IOError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 60, in capture_image
+    image = File(open('%s%s' % (path, filename), 'r'))
+IOError: [Errno 2] No such file or directory: u'./timelapse_images/christys/christys_0000050.jpg'
+[2016-01-31 10:48:31,953: INFO/MainProcess] Received task: timelapse.tasks.capture_image[b405cbcf-4430-4ab5-8307-52c8b71a4296]
+[2016-01-31 10:48:34,058: ERROR/MainProcess] Task timelapse.tasks.capture_image[b405cbcf-4430-4ab5-8307-52c8b71a4296] raised unexpected: IOError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 60, in capture_image
+    filename = "%s_%s.jpg" % (name, image_number)
+IOError: [Errno 2] No such file or directory: u'./timelapse_images/christys/christys_0000050.jpg'
+[2016-01-31 10:49:05,295: WARNING/MainProcess] Exception
+[2016-01-31 10:49:05,295: WARNING/MainProcess] KeyError
+[2016-01-31 10:49:05,296: WARNING/MainProcess] :
+[2016-01-31 10:49:05,296: WARNING/MainProcess] KeyError(140342690473728,)
+[2016-01-31 10:49:05,296: WARNING/MainProcess] in
+[2016-01-31 10:49:05,296: WARNING/MainProcess] <module 'threading' from '/usr/lib/python2.7/threading.pyc'>
+[2016-01-31 10:49:05,296: WARNING/MainProcess] ignored
+[2016-01-31 10:49:06,783: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-31 10:49:06,804: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-31 10:49:06,812: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-31 10:49:07,822: INFO/MainProcess] mingle: all alone
+[2016-01-31 10:49:07,855: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-31 10:49:07,856: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-31 10:49:13,378: INFO/MainProcess] Received task: timelapse.tasks.capture_image[6d8afdf5-c393-4861-b546-649d5eaee7bf]
+[2016-01-31 10:49:15,488: ERROR/MainProcess] Task timelapse.tasks.capture_image[6d8afdf5-c393-4861-b546-649d5eaee7bf] raised unexpected: IOError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 62, in capture_image
+    image = File(open('%s%s' % (path, filename), 'r'))
+IOError: [Errno 2] No such file or directory: u'/static/media//timelapse_images//christys/christys_0000050.jpg'
+[2016-01-31 10:50:17,411: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-31 10:50:17,431: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-31 10:50:17,439: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-31 10:50:18,447: INFO/MainProcess] mingle: all alone
+[2016-01-31 10:50:18,478: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-31 10:50:18,478: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-31 10:50:22,985: INFO/MainProcess] Received task: timelapse.tasks.capture_image[f4fdd778-cfd2-43ec-8fb6-de5aa244bce2]
+[2016-01-31 10:50:25,185: ERROR/MainProcess] Task timelapse.tasks.capture_image[f4fdd778-cfd2-43ec-8fb6-de5aa244bce2] raised unexpected: IOError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 62, in capture_image
+    image = File(open('%s%s' % (path, filename), 'r'))
+IOError: [Errno 2] No such file or directory: u'/static/media//timelapse_images/christys/christys_0000050.jpg'
+[2016-01-31 10:50:55,702: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-31 10:50:55,722: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-31 10:50:55,730: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-31 10:50:56,741: INFO/MainProcess] mingle: all alone
+[2016-01-31 10:50:56,772: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-31 10:50:56,773: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-31 10:51:04,072: INFO/MainProcess] Received task: timelapse.tasks.capture_image[4874e092-7117-4488-b6f8-2fdefc80c040]
+[2016-01-31 10:51:06,269: ERROR/MainProcess] Task timelapse.tasks.capture_image[4874e092-7117-4488-b6f8-2fdefc80c040] raised unexpected: IOError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 62, in capture_image
+    image = File(open('%s%s' % (path, filename), 'r'))
+IOError: [Errno 2] No such file or directory: u'/static/media//timelapse_images/christys/christys_0000050.jpg'
+[2016-01-31 10:51:42,441: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-31 10:51:42,461: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-31 10:51:42,470: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-31 10:51:43,480: INFO/MainProcess] mingle: all alone
+[2016-01-31 10:51:43,505: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-31 10:51:43,506: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-31 10:51:46,482: INFO/MainProcess] Received task: timelapse.tasks.capture_image[6e5b67a5-0f77-4558-aad5-f9851166f8bc]
+[2016-01-31 10:51:48,671: ERROR/MainProcess] Task timelapse.tasks.capture_image[6e5b67a5-0f77-4558-aad5-f9851166f8bc] raised unexpected: IOError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 62, in capture_image
+    image = File(open('%s%s' % (path, filename), 'r'))
+IOError: [Errno 2] No such file or directory: u'/static/media/timelapse_images/christys/christys_0000050.jpg'
+[2016-01-31 10:53:14,826: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-31 10:53:14,845: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-31 10:53:14,854: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-31 10:53:15,864: INFO/MainProcess] mingle: all alone
+[2016-01-31 10:53:15,884: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-31 10:53:15,885: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-31 10:53:20,460: INFO/MainProcess] Received task: timelapse.tasks.capture_image[f656671a-cdce-4c07-bef5-3f0ba3077f97]
+[2016-01-31 10:53:22,644: ERROR/MainProcess] Task timelapse.tasks.capture_image[f656671a-cdce-4c07-bef5-3f0ba3077f97] raised unexpected: IOError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 62, in capture_image
+    image = File(open('%s%s' % (path, filename), 'r'))
+IOError: [Errno 2] No such file or directory: u'/home/gerrard/code/python/gawdit/static/mediatimelapse_images/christys/christys_0000050.jpg'
+[2016-01-31 10:56:04,231: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-31 10:56:04,251: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-31 10:56:04,258: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-31 10:56:05,268: INFO/MainProcess] mingle: all alone
+[2016-01-31 10:56:05,293: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-31 10:56:05,294: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-31 10:56:09,769: INFO/MainProcess] Received task: timelapse.tasks.capture_image[280678b2-e954-40b4-be95-615c7379c896]
+[2016-01-31 10:56:12,090: WARNING/Worker-4] photo taken
+[2016-01-31 10:56:12,241: INFO/MainProcess] Task timelapse.tasks.capture_image[280678b2-e954-40b4-be95-615c7379c896] succeeded in 2.467428187s: None
+[2016-01-31 11:13:40,252: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-31 11:13:40,272: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-31 11:13:40,282: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-31 11:13:41,292: INFO/MainProcess] mingle: all alone
+[2016-01-31 11:13:41,306: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-31 11:13:41,307: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-31 11:13:46,392: INFO/MainProcess] Received task: timelapse.tasks.capture_image[d4f131d4-4651-4fae-a8a6-4e6eb16f552a]
+[2016-01-31 11:13:48,513: WARNING/Worker-4] photo taken
+[2016-01-31 11:13:48,681: INFO/MainProcess] Task timelapse.tasks.capture_image[d4f131d4-4651-4fae-a8a6-4e6eb16f552a] succeeded in 2.284479777s: None
+[2016-01-31 11:13:53,481: INFO/MainProcess] Received task: timelapse.tasks.timelapse_capture[e9e96656-cfe0-4939-9060-4a92cccf300d]
+[2016-01-31 11:13:55,627: WARNING/Worker-3] photo taken
+[2016-01-31 11:13:55,627: WARNING/Worker-3] image 0 captured
+[2016-01-31 11:13:59,764: WARNING/Worker-3] photo taken
+[2016-01-31 11:13:59,765: WARNING/Worker-3] image 1 captured
+[2016-01-31 11:14:03,982: WARNING/Worker-3] photo taken
+[2016-01-31 11:14:03,983: WARNING/Worker-3] image 2 captured
+[2016-01-31 11:14:08,183: WARNING/Worker-3] photo taken
+[2016-01-31 11:14:08,183: WARNING/Worker-3] image 3 captured
+[2016-01-31 11:14:12,325: WARNING/Worker-3] photo taken
+[2016-01-31 11:14:12,326: WARNING/Worker-3] image 4 captured
+[2016-01-31 11:14:16,360: WARNING/Worker-3] photo taken
+[2016-01-31 11:14:16,361: WARNING/Worker-3] image 5 captured
+[2016-01-31 11:14:20,512: WARNING/Worker-3] photo taken
+[2016-01-31 11:14:20,512: WARNING/Worker-3] image 6 captured
+[2016-01-31 11:14:24,613: WARNING/Worker-3] photo taken
+[2016-01-31 11:14:24,614: WARNING/Worker-3] image 7 captured
+[2016-01-31 11:14:28,691: WARNING/Worker-3] photo taken
+[2016-01-31 11:14:28,692: WARNING/Worker-3] image 8 captured
+[2016-01-31 11:14:32,818: WARNING/Worker-3] photo taken
+[2016-01-31 11:14:32,819: WARNING/Worker-3] image 9 captured
+[2016-01-31 11:14:36,961: WARNING/Worker-3] photo taken
+[2016-01-31 11:14:36,962: WARNING/Worker-3] image 10 captured
+[2016-01-31 11:14:41,162: WARNING/Worker-3] photo taken
+[2016-01-31 11:14:41,163: WARNING/Worker-3] image 11 captured
+[2016-01-31 11:14:45,272: WARNING/Worker-3] photo taken
+[2016-01-31 11:14:45,272: WARNING/Worker-3] image 12 captured
+[2016-01-31 11:14:49,424: WARNING/Worker-3] photo taken
+[2016-01-31 11:14:49,425: WARNING/Worker-3] image 13 captured
+[2016-01-31 11:14:53,483: WARNING/Worker-3] photo taken
+[2016-01-31 11:14:53,484: WARNING/Worker-3] image 14 captured
+[2016-01-31 11:14:57,545: WARNING/Worker-3] photo taken
+[2016-01-31 11:14:57,546: WARNING/Worker-3] image 15 captured
+[2016-01-31 11:15:01,671: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:01,671: WARNING/Worker-3] image 16 captured
+[2016-01-31 11:15:05,714: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:05,714: WARNING/Worker-3] image 17 captured
+[2016-01-31 11:15:09,782: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:09,782: WARNING/Worker-3] image 18 captured
+[2016-01-31 11:15:13,951: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:13,951: WARNING/Worker-3] image 19 captured
+[2016-01-31 11:15:18,135: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:18,136: WARNING/Worker-3] image 20 captured
+[2016-01-31 11:15:22,244: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:22,245: WARNING/Worker-3] image 21 captured
+[2016-01-31 11:15:26,356: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:26,356: WARNING/Worker-3] image 22 captured
+[2016-01-31 11:15:30,441: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:30,442: WARNING/Worker-3] image 23 captured
+[2016-01-31 11:15:34,484: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:34,484: WARNING/Worker-3] image 24 captured
+[2016-01-31 11:15:38,568: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:38,569: WARNING/Worker-3] image 25 captured
+[2016-01-31 11:15:42,628: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:42,629: WARNING/Worker-3] image 26 captured
+[2016-01-31 11:15:46,722: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:46,723: WARNING/Worker-3] image 27 captured
+[2016-01-31 11:15:50,842: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:50,842: WARNING/Worker-3] image 28 captured
+[2016-01-31 11:15:54,985: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:54,986: WARNING/Worker-3] image 29 captured
+[2016-01-31 11:15:59,103: WARNING/Worker-3] photo taken
+[2016-01-31 11:15:59,104: WARNING/Worker-3] image 30 captured
+[2016-01-31 11:16:03,237: WARNING/Worker-3] photo taken
+[2016-01-31 11:16:03,237: WARNING/Worker-3] image 31 captured
+[2016-01-31 11:16:07,380: WARNING/Worker-3] photo taken
+[2016-01-31 11:16:07,381: WARNING/Worker-3] image 32 captured
+[2016-01-31 11:16:11,439: WARNING/Worker-3] photo taken
+[2016-01-31 11:16:11,440: WARNING/Worker-3] image 33 captured
+[2016-01-31 11:16:15,466: WARNING/Worker-3] photo taken
+[2016-01-31 11:16:15,466: WARNING/Worker-3] image 34 captured
+[2016-01-31 11:16:19,603: WARNING/Worker-3] photo taken
+[2016-01-31 11:16:19,604: WARNING/Worker-3] image 35 captured
+[2016-01-31 11:16:23,729: WARNING/Worker-3] photo taken
+[2016-01-31 11:16:23,730: WARNING/Worker-3] image 36 captured
+[2016-01-31 11:16:27,875: WARNING/Worker-3] photo taken
+[2016-01-31 11:16:27,876: WARNING/Worker-3] image 37 captured
+[2016-01-31 11:16:32,056: WARNING/Worker-3] photo taken
+[2016-01-31 11:16:32,057: WARNING/Worker-3] image 38 captured
+[2016-01-31 11:16:36,150: WARNING/Worker-3] photo taken
+[2016-01-31 11:16:36,151: WARNING/Worker-3] image 39 captured
+[2016-01-31 11:16:40,277: WARNING/Worker-3] photo taken
+[2016-01-31 11:16:40,277: WARNING/Worker-3] image 40 captured
+[2016-01-31 11:16:44,305: WARNING/Worker-3] photo taken
+[2016-01-31 11:16:44,306: WARNING/Worker-3] image 41 captured
+[2016-01-31 11:16:48,356: WARNING/Worker-3] photo taken
+[2016-01-31 11:16:48,357: WARNING/Worker-3] image 42 captured
+[2016-01-31 11:16:52,408: WARNING/Worker-3] photo taken
+[2016-01-31 11:16:52,409: WARNING/Worker-3] image 43 captured
+[2016-01-31 11:16:56,442: WARNING/Worker-3] photo taken
+[2016-01-31 11:16:56,443: WARNING/Worker-3] image 44 captured
+[2016-01-31 11:17:00,485: WARNING/Worker-3] photo taken
+[2016-01-31 11:17:00,486: WARNING/Worker-3] image 45 captured
+[2016-01-31 11:17:04,536: WARNING/Worker-3] photo taken
+[2016-01-31 11:17:04,537: WARNING/Worker-3] image 46 captured
+[2016-01-31 11:17:08,621: WARNING/Worker-3] photo taken
+[2016-01-31 11:17:08,622: WARNING/Worker-3] image 47 captured
+[2016-01-31 11:17:12,739: WARNING/Worker-3] photo taken
+[2016-01-31 11:17:12,740: WARNING/Worker-3] image 48 captured
+[2016-01-31 11:17:16,875: WARNING/Worker-3] photo taken
+[2016-01-31 11:17:16,876: WARNING/Worker-3] image 49 captured
+[2016-01-31 11:17:19,038: ERROR/MainProcess] Task timelapse.tasks.timelapse_capture[e9e96656-cfe0-4939-9060-4a92cccf300d] raised unexpected: NameError("global name 'create_timelapse' is not defined",)
+Traceback (most recent call last):
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 138, in timelapse_capture
+    create_timelapse(project)
+NameError: global name 'create_timelapse' is not defined
+[2016-01-31 11:19:34,672: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-31 11:19:34,692: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-31 11:19:34,701: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-31 11:19:35,712: INFO/MainProcess] mingle: all alone
+[2016-01-31 11:19:35,741: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-31 11:19:35,742: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-31 11:19:40,623: INFO/MainProcess] Received task: timelapse.tasks.capture_image[98d5e86b-5bce-4b23-a60a-bf63f69cbfaf]
+[2016-01-31 11:19:42,856: WARNING/Worker-3] photo taken
+[2016-01-31 11:19:43,016: INFO/MainProcess] Task timelapse.tasks.capture_image[98d5e86b-5bce-4b23-a60a-bf63f69cbfaf] succeeded in 2.386902976s: None
+[2016-01-31 11:19:59,536: INFO/MainProcess] Received task: timelapse.tasks.timelapse_capture[67591c55-3bee-4ee2-9c23-1ad4c06c39a0]
+[2016-01-31 11:20:01,740: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:01,740: WARNING/Worker-2] image 0 captured
+[2016-01-31 11:20:05,901: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:05,901: WARNING/Worker-2] image 1 captured
+[2016-01-31 11:20:10,060: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:10,060: WARNING/Worker-2] image 2 captured
+[2016-01-31 11:20:14,194: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:14,195: WARNING/Worker-2] image 3 captured
+[2016-01-31 11:20:18,312: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:18,313: WARNING/Worker-2] image 4 captured
+[2016-01-31 11:20:22,367: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:22,367: WARNING/Worker-2] image 5 captured
+[2016-01-31 11:20:26,476: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:26,477: WARNING/Worker-2] image 6 captured
+[2016-01-31 11:20:30,602: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:30,603: WARNING/Worker-2] image 7 captured
+[2016-01-31 11:20:34,746: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:34,746: WARNING/Worker-2] image 8 captured
+[2016-01-31 11:20:38,922: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:38,923: WARNING/Worker-2] image 9 captured
+[2016-01-31 11:20:43,090: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:43,091: WARNING/Worker-2] image 10 captured
+[2016-01-31 11:20:47,251: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:47,252: WARNING/Worker-2] image 11 captured
+[2016-01-31 11:20:51,353: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:51,354: WARNING/Worker-2] image 12 captured
+[2016-01-31 11:20:55,480: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:55,481: WARNING/Worker-2] image 13 captured
+[2016-01-31 11:20:59,598: WARNING/Worker-2] photo taken
+[2016-01-31 11:20:59,598: WARNING/Worker-2] image 14 captured
+[2016-01-31 11:21:03,724: WARNING/Worker-2] photo taken
+[2016-01-31 11:21:03,725: WARNING/Worker-2] image 15 captured
+[2016-01-31 11:21:07,818: WARNING/Worker-2] photo taken
+[2016-01-31 11:21:07,818: WARNING/Worker-2] image 16 captured
+[2016-01-31 11:21:11,936: WARNING/Worker-2] photo taken
+[2016-01-31 11:21:11,937: WARNING/Worker-2] image 17 captured
+[2016-01-31 11:21:16,124: WARNING/Worker-2] photo taken
+[2016-01-31 11:21:16,124: WARNING/Worker-2] image 18 captured
+[2016-01-31 11:21:20,354: WARNING/Worker-2] photo taken
+[2016-01-31 11:21:20,355: WARNING/Worker-2] image 19 captured
+[2016-01-31 11:21:24,382: WARNING/Worker-2] photo taken
+[2016-01-31 11:21:24,383: WARNING/Worker-2] image 20 captured
+[2016-01-31 11:21:28,425: WARNING/Worker-2] photo taken
+[2016-01-31 11:21:28,426: WARNING/Worker-2] image 21 captured
+[2016-01-31 11:21:32,468: WARNING/Worker-2] photo taken
+[2016-01-31 11:21:32,469: WARNING/Worker-2] image 22 captured
+[2016-01-31 11:21:36,562: WARNING/Worker-2] photo taken
+[2016-01-31 11:21:36,562: WARNING/Worker-2] image 23 captured
+[2016-01-31 11:21:40,630: WARNING/Worker-2] photo taken
+[2016-01-31 11:21:40,631: WARNING/Worker-2] image 24 captured
+[2016-01-31 11:21:42,790: ERROR/MainProcess] Task timelapse.tasks.timelapse_capture[67591c55-3bee-4ee2-9c23-1ad4c06c39a0] raised unexpected: NameError("global name 'create_timelapse' is not defined",)
+Traceback (most recent call last):
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 138, in timelapse_capture
+    create_timelapse(project)
+NameError: global name 'create_timelapse' is not defined
+[2016-01-31 11:33:15,529: INFO/MainProcess] Received task: timelapse.tasks.create_timelapse_video[49e1af58-41bc-4409-8957-51dadd7557e5]
+[2016-01-31 11:33:15,860: ERROR/MainProcess] Task timelapse.tasks.create_timelapse_video[49e1af58-41bc-4409-8957-51dadd7557e5] raised unexpected: TypeError('not all arguments converted during string formatting',)
+Traceback (most recent call last):
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 83, in create_timelapse_video
+    img_path = "%s/" % (IMAGE_PATH, name)
+TypeError: not all arguments converted during string formatting
+[2016-01-31 11:35:13,235: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-31 11:35:13,255: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-31 11:35:13,264: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-31 11:35:14,275: INFO/MainProcess] mingle: all alone
+[2016-01-31 11:35:14,310: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-31 11:35:14,311: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-31 11:35:24,771: INFO/MainProcess] Received task: timelapse.tasks.create_timelapse_video[56808c98-eba6-42fe-9204-3adf160228c9]
+[2016-01-31 11:35:25,036: ERROR/MainProcess] Task timelapse.tasks.create_timelapse_video[56808c98-eba6-42fe-9204-3adf160228c9] raised unexpected: TypeError('not all arguments converted during string formatting',)
+Traceback (most recent call last):
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 83, in create_timelapse_video
+    img_path = "%s/" % (IMAGE_PATH, name)
+TypeError: not all arguments converted during string formatting
+[2016-01-31 11:37:44,652: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-31 11:37:44,677: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-31 11:37:44,686: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-31 11:37:45,698: INFO/MainProcess] mingle: all alone
+[2016-01-31 11:37:45,730: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-31 11:37:45,731: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-31 11:37:51,862: INFO/MainProcess] Received task: timelapse.tasks.create_timelapse_video[104eb66e-9519-474c-9eb9-548510574296]
+[2016-01-31 11:37:52,212: ERROR/MainProcess] Task timelapse.tasks.create_timelapse_video[104eb66e-9519-474c-9eb9-548510574296] raised unexpected: TypeError('not all arguments converted during string formatting',)
+Traceback (most recent call last):
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 83, in create_timelapse_video
+    img_path = "%s/" % (IMAGE_PATH, name)
+TypeError: not all arguments converted during string formatting
+[2016-01-31 11:38:27,985: INFO/MainProcess] Received task: timelapse.tasks.timelapse_capture[b63b867b-20e7-44ac-8158-05efdc585136]
+[2016-01-31 11:38:30,138: WARNING/Worker-3] photo taken
+[2016-01-31 11:38:30,139: WARNING/Worker-3] image 0 captured
+[2016-01-31 11:38:34,307: WARNING/Worker-3] photo taken
+[2016-01-31 11:38:34,308: WARNING/Worker-3] image 1 captured
+[2016-01-31 11:38:38,358: WARNING/Worker-3] photo taken
+[2016-01-31 11:38:38,359: WARNING/Worker-3] image 2 captured
+[2016-01-31 11:38:42,418: WARNING/Worker-3] photo taken
+[2016-01-31 11:38:42,419: WARNING/Worker-3] image 3 captured
+[2016-01-31 11:38:46,461: WARNING/Worker-3] photo taken
+[2016-01-31 11:38:46,461: WARNING/Worker-3] image 4 captured
+[2016-01-31 11:38:50,514: WARNING/Worker-3] photo taken
+[2016-01-31 11:38:50,514: WARNING/Worker-3] image 5 captured
+[2016-01-31 11:38:54,640: WARNING/Worker-3] photo taken
+[2016-01-31 11:38:54,641: WARNING/Worker-3] image 6 captured
+[2016-01-31 11:38:58,750: WARNING/Worker-3] photo taken
+[2016-01-31 11:38:58,751: WARNING/Worker-3] image 7 captured
+[2016-01-31 11:39:02,944: WARNING/Worker-3] photo taken
+[2016-01-31 11:39:02,945: WARNING/Worker-3] image 8 captured
+[2016-01-31 11:39:07,070: WARNING/Worker-3] photo taken
+[2016-01-31 11:39:07,071: WARNING/Worker-3] image 9 captured
+[2016-01-31 11:39:11,219: WARNING/Worker-3] photo taken
+[2016-01-31 11:39:11,220: WARNING/Worker-3] image 10 captured
+[2016-01-31 11:39:15,345: WARNING/Worker-3] photo taken
+[2016-01-31 11:39:15,345: WARNING/Worker-3] image 11 captured
+[2016-01-31 11:39:19,407: WARNING/Worker-3] photo taken
+[2016-01-31 11:39:19,407: WARNING/Worker-3] image 12 captured
+[2016-01-31 11:39:23,493: WARNING/Worker-3] photo taken
+[2016-01-31 11:39:23,494: WARNING/Worker-3] image 13 captured
+[2016-01-31 11:39:27,662: WARNING/Worker-3] photo taken
+[2016-01-31 11:39:27,663: WARNING/Worker-3] image 14 captured
+[2016-01-31 11:39:31,764: WARNING/Worker-3] photo taken
+[2016-01-31 11:39:31,764: WARNING/Worker-3] image 15 captured
+[2016-01-31 11:39:35,890: WARNING/Worker-3] photo taken
+[2016-01-31 11:39:35,891: WARNING/Worker-3] image 16 captured
+[2016-01-31 11:39:40,209: WARNING/Worker-3] photo taken
+[2016-01-31 11:39:40,209: WARNING/Worker-3] image 17 captured
+[2016-01-31 11:39:44,411: WARNING/Worker-3] photo taken
+[2016-01-31 11:39:44,412: WARNING/Worker-3] image 18 captured
+[2016-01-31 11:39:48,496: WARNING/Worker-3] photo taken
+[2016-01-31 11:39:48,497: WARNING/Worker-3] image 19 captured
+[2016-01-31 11:39:52,600: WARNING/Worker-3] photo taken
+[2016-01-31 11:39:52,600: WARNING/Worker-3] image 20 captured
+[2016-01-31 11:39:56,769: WARNING/Worker-3] photo taken
+[2016-01-31 11:39:56,770: WARNING/Worker-3] image 21 captured
+[2016-01-31 11:40:00,920: WARNING/Worker-3] photo taken
+[2016-01-31 11:40:00,921: WARNING/Worker-3] image 22 captured
+[2016-01-31 11:40:05,146: WARNING/Worker-3] photo taken
+[2016-01-31 11:40:05,147: WARNING/Worker-3] image 23 captured
+[2016-01-31 11:40:09,322: WARNING/Worker-3] photo taken
+[2016-01-31 11:40:09,323: WARNING/Worker-3] image 24 captured
+[2016-01-31 11:40:11,501: ERROR/MainProcess] Task timelapse.tasks.timelapse_capture[b63b867b-20e7-44ac-8158-05efdc585136] raised unexpected: TypeError('not all arguments converted during string formatting',)
+Traceback (most recent call last):
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 139, in timelapse_capture
+    create_timelapse_video(project)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/local.py", line 188, in __call__
+    return self._get_current_object()(*a, **kw)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 439, in __protected_call__
+    return orig(self, *args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/task.py", line 420, in __call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 83, in create_timelapse_video
+    img_path = "%s/" % (IMAGE_PATH, name)
+TypeError: not all arguments converted during string formatting
+[2016-01-31 11:48:15,927: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-31 11:48:15,948: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-31 11:48:15,956: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-31 11:48:16,966: INFO/MainProcess] mingle: all alone
+[2016-01-31 11:48:16,999: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-31 11:48:17,000: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-31 11:48:55,395: INFO/MainProcess] Received task: timelapse.tasks.create_timelapse_video[ec1c03d1-93d6-461d-aef6-8a6527114313]
+[2016-01-31 11:48:55,397: WARNING/Worker-3] /home/gerrard/code/python/gawdit/static/media/timelapse_video/christys/
+[2016-01-31 11:48:58,527: WARNING/Worker-3] video complete
+[2016-01-31 11:48:58,737: INFO/MainProcess] Task timelapse.tasks.create_timelapse_video[ec1c03d1-93d6-461d-aef6-8a6527114313] succeeded in 3.340360588s: None
+[2016-01-31 11:49:25,219: INFO/MainProcess] Received task: timelapse.tasks.push_to_vimeo[9843a875-d1a4-4c01-a448-97f6e4b16f54]
+[2016-01-31 11:49:25,223: INFO/Worker-2] Starting new HTTPS connection (1): api.vimeo.com
+[2016-01-31 11:49:26,955: INFO/Worker-2] Starting new HTTP connection (1): 1511920574.cloud.vimeo.com
+[2016-01-31 11:49:31,391: INFO/Worker-2] Starting new HTTP connection (1): 1511920574.cloud.vimeo.com
+[2016-01-31 11:49:31,630: INFO/Worker-2] Starting new HTTPS connection (1): api.vimeo.com
+[2016-01-31 11:49:32,318: WARNING/Worker-2] Set video title. Url is https://api.vimeo.com/videos/153679038 and payload is {'name': u'christys'}
+[2016-01-31 11:49:32,318: WARNING/Worker-2] {'Authorization': 'Bearer 99de9beecdc80a53d56f2731a00cf7fb'}
+[2016-01-31 11:49:32,343: INFO/Worker-2] Starting new HTTPS connection (1): api.vimeo.com
+[2016-01-31 11:49:32,702: WARNING/Worker-2] <Response [200]>
+[2016-01-31 11:49:32,869: INFO/MainProcess] Task timelapse.tasks.push_to_vimeo[9843a875-d1a4-4c01-a448-97f6e4b16f54] succeeded in 7.649164584s: None
+[2016-01-31 11:50:21,842: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-31 11:50:21,862: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-31 11:50:21,870: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-31 11:50:22,881: INFO/MainProcess] mingle: all alone
+[2016-01-31 11:50:22,912: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-31 11:50:22,912: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-31 11:50:25,295: INFO/MainProcess] Received task: timelapse.tasks.push_to_vimeo[bc477638-5cc8-4588-97b0-821bd99c601c]
+[2016-01-31 11:50:25,298: WARNING/Worker-3] /home/gerrard/code/python/gawdit/static/media/timelapse_video/christys/christys.mp4
+[2016-01-31 11:50:25,300: INFO/Worker-3] Starting new HTTPS connection (1): api.vimeo.com
+[2016-01-31 11:50:25,572: INFO/Worker-3] Starting new HTTP connection (1): 1511920571.cloud.vimeo.com
+[2016-01-31 11:50:27,316: INFO/Worker-3] Starting new HTTP connection (1): 1511920571.cloud.vimeo.com
+[2016-01-31 11:50:27,648: INFO/Worker-3] Starting new HTTPS connection (1): api.vimeo.com
+[2016-01-31 11:50:28,167: WARNING/Worker-3] Set video title. Url is https://api.vimeo.com/videos/153679102 and payload is {'name': u'christys'}
+[2016-01-31 11:50:28,168: WARNING/Worker-3] {'Authorization': 'Bearer 99de9beecdc80a53d56f2731a00cf7fb'}
+[2016-01-31 11:50:28,169: INFO/Worker-3] Starting new HTTPS connection (1): api.vimeo.com
+[2016-01-31 11:50:28,814: WARNING/Worker-3] <Response [200]>
+[2016-01-31 11:50:28,961: INFO/MainProcess] Task timelapse.tasks.push_to_vimeo[bc477638-5cc8-4588-97b0-821bd99c601c] succeeded in 3.663801102s: None

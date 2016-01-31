@@ -330,4 +330,37 @@ else:
 ###################
 
 #CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend',
-
+# Absolute or relative path to the 'celery' command:                                                                                                                                                   
+CELERY_BIN="/home/gerrard/.virtualenvs/gawdit/bin/celery"                                                                                                                                              
+                                                                                                                                                                                                       
+# App instance to use                                                                                                                                                                                  
+# comment out this line if you don't use an app                                                                                                                                                        
+CELERY_APP="gawdit"                                                                                                                                                                                    
+# or fully qualified:                                                                                                                                                                                  
+#CELERY_APP="proj.tasks:app"                                                                                                                                                                           
+                                                                                                                                                                                                       
+# If enabled pid and log directories will be created if missing,                                                                                                                                       
+# and owned by the userid/group configured.                                                                                                                                                            
+CELERY_CREATE_DIRS=1                                                                                                                                                                                   
+                                                                                                                                                                                                       
+CELERY_TASK_RESULT_EXPIRES=3600                                                                                                                                                                        
+CELERY_TIMEZONE = 'US/Eastern'                                                                                                                                                                         
+CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'                                                                                                                                     
+# Name of nodes to start, here we have a single node                                                                                                                                                   
+CELERYD_NODES="w1"                                                                                                                                                                                     
+# Where to chdir at start.                                                                                                                                                                             
+#CELERYD_CHDIR="/home/gerrard/mezzanine/gawdit"                                                                                                                                                       
+# Python interpreter from environment.                                                                                                                                                                 
+ENV_PYTHON="/home/gerrard/.virtualenvs/gawdit/bin/python"                                                                                                                                              
+# Extra arguments to celeryd                                                                                                                                                                           
+CELERYD_OPTS="--time-limit=300 --concurrency=8"                                                                                                                                                        
+# Name of the celery config module.                                                                                                                                                                    
+#CELERY_CONFIG_MODULE="celeryconfig"                                                                                                                                                                   
+# %n will be replaced with the nodename.                                                                                                                                                               
+#CELERYD_LOG_FILE="/home/gerrard/mezzanine/gawdit/log/celery/%n.log"                                                                                                                                  
+#CELERYD_PID_FILE="/home/gerrard/mezzanine/gawdit/run/celery/%n.pid"                                                                                                                                  
+# Workers should run as an unprivileged user.                                                                                                                                                          
+CELERYD_USER="gerrard"                                                                                                                                                                                 
+CELERYD_GROUP="gerrard"                                                                                                                                                                                
+# Name of the projects settings module.                                                                                                                                                                
+DJANGO_SETTINGS_MODULE="settings"
