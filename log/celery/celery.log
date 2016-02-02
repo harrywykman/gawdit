@@ -784,3 +784,706 @@ You must only enable the serializers that you will actually use.
 [2016-01-31 11:50:28,169: INFO/Worker-3] Starting new HTTPS connection (1): api.vimeo.com
 [2016-01-31 11:50:28,814: WARNING/Worker-3] <Response [200]>
 [2016-01-31 11:50:28,961: INFO/MainProcess] Task timelapse.tasks.push_to_vimeo[bc477638-5cc8-4588-97b0-821bd99c601c] succeeded in 3.663801102s: None
+[2016-01-31 20:06:16,874: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-01-31 20:06:16,927: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-01-31 20:06:16,936: INFO/MainProcess] mingle: searching for neighbors
+[2016-01-31 20:06:17,956: INFO/MainProcess] mingle: all alone
+[2016-01-31 20:06:17,988: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-01-31 20:06:17,988: WARNING/MainProcess] celery@arcadia ready.
+[2016-01-31 20:06:17,991: INFO/MainProcess] Received task: timelapse.tasks.timelapse_capture_push[f55bdefc-cf5c-41e7-b747-d1f5355000c9]
+[2016-01-31 20:06:20,295: WARNING/Worker-3] photo taken
+[2016-01-31 20:06:20,296: WARNING/Worker-3] image 0 captured
+[2016-01-31 20:06:24,572: WARNING/Worker-3] photo taken
+[2016-01-31 20:06:24,573: WARNING/Worker-3] image 1 captured
+[2016-01-31 20:06:28,823: WARNING/Worker-3] photo taken
+[2016-01-31 20:06:28,824: WARNING/Worker-3] image 2 captured
+[2016-01-31 20:06:33,049: WARNING/Worker-3] photo taken
+[2016-01-31 20:06:33,050: WARNING/Worker-3] image 3 captured
+[2016-01-31 20:06:37,517: WARNING/Worker-3] photo taken
+[2016-01-31 20:06:37,518: WARNING/Worker-3] image 4 captured
+[2016-01-31 20:06:41,785: WARNING/Worker-3] photo taken
+[2016-01-31 20:06:41,786: WARNING/Worker-3] image 5 captured
+[2016-01-31 20:06:46,053: WARNING/Worker-3] photo taken
+[2016-01-31 20:06:46,054: WARNING/Worker-3] image 6 captured
+[2016-01-31 20:06:50,337: WARNING/Worker-3] photo taken
+[2016-01-31 20:06:50,338: WARNING/Worker-3] image 7 captured
+[2016-01-31 20:06:54,624: WARNING/Worker-3] photo taken
+[2016-01-31 20:06:54,625: WARNING/Worker-3] image 8 captured
+[2016-01-31 20:06:58,841: WARNING/Worker-3] photo taken
+[2016-01-31 20:06:58,842: WARNING/Worker-3] image 9 captured
+[2016-01-31 20:07:03,101: WARNING/Worker-3] photo taken
+[2016-01-31 20:07:03,102: WARNING/Worker-3] image 10 captured
+[2016-01-31 20:07:07,302: WARNING/Worker-3] photo taken
+[2016-01-31 20:07:07,303: WARNING/Worker-3] image 11 captured
+[2016-01-31 20:07:11,520: WARNING/Worker-3] photo taken
+[2016-01-31 20:07:11,521: WARNING/Worker-3] image 12 captured
+[2016-01-31 20:07:15,738: WARNING/Worker-3] photo taken
+[2016-01-31 20:07:15,739: WARNING/Worker-3] image 13 captured
+[2016-01-31 20:07:19,956: WARNING/Worker-3] photo taken
+[2016-01-31 20:07:19,957: WARNING/Worker-3] image 14 captured
+[2016-01-31 20:07:24,217: WARNING/Worker-3] photo taken
+[2016-01-31 20:07:24,218: WARNING/Worker-3] image 15 captured
+[2016-01-31 20:07:28,510: WARNING/Worker-3] photo taken
+[2016-01-31 20:07:28,511: WARNING/Worker-3] image 16 captured
+[2016-01-31 20:07:32,753: WARNING/Worker-3] photo taken
+[2016-01-31 20:07:32,754: WARNING/Worker-3] image 17 captured
+[2016-01-31 20:07:36,971: WARNING/Worker-3] photo taken
+[2016-01-31 20:07:36,972: WARNING/Worker-3] image 18 captured
+[2016-01-31 20:07:41,256: WARNING/Worker-3] photo taken
+[2016-01-31 20:07:41,257: WARNING/Worker-3] image 19 captured
+[2016-01-31 20:07:45,541: WARNING/Worker-3] photo taken
+[2016-01-31 20:07:45,541: WARNING/Worker-3] image 20 captured
+[2016-01-31 20:07:49,758: WARNING/Worker-3] photo taken
+[2016-01-31 20:07:49,759: WARNING/Worker-3] image 21 captured
+[2016-01-31 20:07:53,985: WARNING/Worker-3] photo taken
+[2016-01-31 20:07:53,986: WARNING/Worker-3] image 22 captured
+[2016-01-31 20:07:58,263: WARNING/Worker-3] photo taken
+[2016-01-31 20:07:58,263: WARNING/Worker-3] image 23 captured
+[2016-01-31 20:08:02,514: WARNING/Worker-3] photo taken
+[2016-01-31 20:08:02,515: WARNING/Worker-3] image 24 captured
+[2016-01-31 20:08:04,518: WARNING/Worker-3] /home/gerrard/code/python/gawdit/static/media/timelapse_video/christys/
+[2016-01-31 20:08:07,644: WARNING/Worker-3] video complete
+[2016-01-31 20:08:07,645: WARNING/Worker-3] /home/gerrard/code/python/gawdit/static/media/timelapse_video/christys/christys.mp4
+[2016-01-31 20:08:07,653: INFO/Worker-3] Starting new HTTPS connection (1): api.vimeo.com
+[2016-01-31 20:08:08,065: INFO/Worker-3] Starting new HTTP connection (1): 1511920580.cloud.vimeo.com
+[2016-01-31 20:08:18,645: INFO/Worker-3] Starting new HTTP connection (1): 1511920580.cloud.vimeo.com
+[2016-01-31 20:08:19,202: INFO/Worker-3] Starting new HTTPS connection (1): api.vimeo.com
+[2016-01-31 20:08:19,918: WARNING/Worker-3] Set video title. Url is https://api.vimeo.com/videos/153715129 and payload is {'name': u'christys'}
+[2016-01-31 20:08:19,918: WARNING/Worker-3] {'Authorization': 'Bearer 99de9beecdc80a53d56f2731a00cf7fb'}
+[2016-01-31 20:08:19,922: INFO/Worker-3] Starting new HTTPS connection (1): api.vimeo.com
+[2016-01-31 20:08:20,544: WARNING/Worker-3] <Response [200]>
+[2016-01-31 20:08:20,703: INFO/MainProcess] Task timelapse.tasks.timelapse_capture_push[f55bdefc-cf5c-41e7-b747-d1f5355000c9] succeeded in 122.706960328s: None
+[2016-02-01 08:18:41,687: INFO/MainProcess] Received task: timelapse.tasks.create_timelapse_video[cab9e423-ff13-426f-ac08-767deb1cf501]
+[2016-02-01 08:18:41,689: WARNING/Worker-2] /home/gerrard/code/python/gawdit/static/media/timelapse_video/christys/
+[2016-02-01 08:18:44,506: WARNING/Worker-2] video complete
+[2016-02-01 08:18:44,722: INFO/MainProcess] Task timelapse.tasks.create_timelapse_video[cab9e423-ff13-426f-ac08-767deb1cf501] succeeded in 3.033399273s: None
+[2016-02-01 19:47:03,871: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-02-01 19:47:03,986: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-02-01 19:47:04,001: INFO/MainProcess] mingle: searching for neighbors
+[2016-02-01 19:47:05,048: INFO/MainProcess] mingle: all alone
+[2016-02-01 19:47:05,095: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/kombu/pidbox.py:75: UserWarning: A node named celery@arcadia is already using this process mailbox!
+
+Maybe you forgot to shutdown the other node or did not do so properly?
+Or if you meant to start multiple nodes on the same host please make sure
+you give each node a unique node name!
+
+  warnings.warn(W_PIDBOX_IN_USE.format(node=self))
+
+[2016-02-01 19:47:05,116: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-02-01 19:47:05,116: WARNING/MainProcess] celery@arcadia ready.
+[2016-02-01 19:47:21,825: INFO/MainProcess] Received task: timelapse.tasks.push_to_vimeo[e40ccd99-af9f-4058-beb1-bef464300a90]
+[2016-02-01 19:47:21,827: WARNING/Worker-4] /home/gerrard/code/python/gawdit/static/media/timelapse_video/christys/christys.mp4
+[2016-02-01 19:47:21,830: INFO/Worker-4] Starting new HTTPS connection (1): api.vimeo.com
+[2016-02-01 19:47:22,359: INFO/Worker-4] Starting new HTTP connection (1): 1511920575.cloud.vimeo.com
+[2016-02-01 19:47:36,707: INFO/Worker-4] Starting new HTTP connection (1): 1511920575.cloud.vimeo.com
+[2016-02-01 19:47:37,064: INFO/Worker-4] Starting new HTTPS connection (1): api.vimeo.com
+[2016-02-01 19:47:37,606: WARNING/Worker-4] Set video title. Url is https://api.vimeo.com/videos/153849993 and payload is {'name': u'christys'}
+[2016-02-01 19:47:37,607: WARNING/Worker-4] {'Authorization': 'Bearer 99de9beecdc80a53d56f2731a00cf7fb'}
+[2016-02-01 19:47:37,624: INFO/Worker-4] Starting new HTTPS connection (1): api.vimeo.com
+[2016-02-01 19:47:38,034: WARNING/Worker-4] <Response [200]>
+[2016-02-01 19:47:38,215: INFO/MainProcess] Task timelapse.tasks.push_to_vimeo[e40ccd99-af9f-4058-beb1-bef464300a90] succeeded in 16.388928561s: None
+[2016-02-01 19:48:05,179: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-02-01 19:48:05,230: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-02-01 19:48:05,239: INFO/MainProcess] mingle: searching for neighbors
+[2016-02-01 19:48:06,249: INFO/MainProcess] mingle: all alone
+[2016-02-01 19:48:06,279: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-02-01 19:48:06,279: WARNING/MainProcess] celery@arcadia ready.
+[2016-02-02 09:20:40,700: INFO/MainProcess] Received task: timelapse.tasks.timelapse_capture_push[0b75f82b-3098-46e7-82ec-a53d756e0e0a]
+[2016-02-02 09:20:43,137: WARNING/Worker-4] photo taken
+[2016-02-02 09:20:43,138: WARNING/Worker-4] image 0 captured
+[2016-02-02 09:20:48,407: WARNING/Worker-4] photo taken
+[2016-02-02 09:20:48,407: WARNING/Worker-4] image 1 captured
+[2016-02-02 09:20:52,406: INFO/MainProcess] Received task: timelapse.tasks.timelapse_capture[a8f49c23-501c-4364-bc37-660d89e2e047]
+[2016-02-02 09:20:53,110: WARNING/Worker-3] photo taken
+[2016-02-02 09:20:53,111: WARNING/Worker-3] image 0 captured
+[2016-02-02 09:20:53,630: WARNING/Worker-4] photo taken
+[2016-02-02 09:20:53,631: WARNING/Worker-4] image 2 captured
+[2016-02-02 09:20:56,925: ERROR/MainProcess] Task timelapse.tasks.timelapse_capture_push[0b75f82b-3098-46e7-82ec-a53d756e0e0a] raised unexpected: IOError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 144, in timelapse_capture_push
+    capture_timelapse(project)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/local.py", line 188, in __call__
+    return self._get_current_object()(*a, **kw)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 439, in __protected_call__
+    return orig(self, *args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/task.py", line 420, in __call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 74, in capture_timelapse
+    capture_image(project, n)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/local.py", line 188, in __call__
+    return self._get_current_object()(*a, **kw)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/trace.py", line 439, in __protected_call__
+    return orig(self, *args, **kwargs)
+  File "/home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/app/task.py", line 420, in __call__
+    return self.run(*args, **kwargs)
+  File "/home/gerrard/code/python/gawdit/timelapse/tasks.py", line 65, in capture_image
+    image = File(open('%s%s' % (path, filename), 'r'))
+IOError: [Errno 2] No such file or directory: u'/home/gerrard/code/python/gawdit/static/media/timelapse_images/straw/straw_0000003.jpg'
+[2016-02-02 09:20:58,341: WARNING/Worker-3] photo taken
+[2016-02-02 09:20:58,342: WARNING/Worker-3] image 1 captured
+[2016-02-02 09:21:03,576: WARNING/Worker-3] photo taken
+[2016-02-02 09:21:03,577: WARNING/Worker-3] image 2 captured
+[2016-02-02 09:21:08,753: WARNING/Worker-3] photo taken
+[2016-02-02 09:21:08,754: WARNING/Worker-3] image 3 captured
+[2016-02-02 09:21:13,955: WARNING/Worker-3] photo taken
+[2016-02-02 09:21:13,955: WARNING/Worker-3] image 4 captured
+[2016-02-02 09:21:19,183: WARNING/Worker-3] photo taken
+[2016-02-02 09:21:19,183: WARNING/Worker-3] image 5 captured
+[2016-02-02 09:21:24,451: WARNING/Worker-3] photo taken
+[2016-02-02 09:21:24,451: WARNING/Worker-3] image 6 captured
+[2016-02-02 09:21:29,695: WARNING/Worker-3] photo taken
+[2016-02-02 09:21:29,695: WARNING/Worker-3] image 7 captured
+[2016-02-02 09:21:34,930: WARNING/Worker-3] photo taken
+[2016-02-02 09:21:34,930: WARNING/Worker-3] image 8 captured
+[2016-02-02 09:21:40,131: WARNING/Worker-3] photo taken
+[2016-02-02 09:21:40,132: WARNING/Worker-3] image 9 captured
+[2016-02-02 09:21:45,385: WARNING/Worker-3] photo taken
+[2016-02-02 09:21:45,386: WARNING/Worker-3] image 10 captured
+[2016-02-02 09:21:50,603: WARNING/Worker-3] photo taken
+[2016-02-02 09:21:50,604: WARNING/Worker-3] image 11 captured
+[2016-02-02 09:21:55,797: WARNING/Worker-3] photo taken
+[2016-02-02 09:21:55,798: WARNING/Worker-3] image 12 captured
+[2016-02-02 09:22:01,015: WARNING/Worker-3] photo taken
+[2016-02-02 09:22:01,015: WARNING/Worker-3] image 13 captured
+[2016-02-02 09:22:06,225: WARNING/Worker-3] photo taken
+[2016-02-02 09:22:06,226: WARNING/Worker-3] image 14 captured
+[2016-02-02 09:22:11,502: WARNING/Worker-3] photo taken
+[2016-02-02 09:22:11,503: WARNING/Worker-3] image 15 captured
+[2016-02-02 09:22:16,722: WARNING/Worker-3] photo taken
+[2016-02-02 09:22:16,723: WARNING/Worker-3] image 16 captured
+[2016-02-02 09:22:21,965: WARNING/Worker-3] photo taken
+[2016-02-02 09:22:21,966: WARNING/Worker-3] image 17 captured
+[2016-02-02 09:22:27,167: WARNING/Worker-3] photo taken
+[2016-02-02 09:22:27,168: WARNING/Worker-3] image 18 captured
+[2016-02-02 09:22:32,444: WARNING/Worker-3] photo taken
+[2016-02-02 09:22:32,444: WARNING/Worker-3] image 19 captured
+[2016-02-02 09:22:37,688: WARNING/Worker-3] photo taken
+[2016-02-02 09:22:37,688: WARNING/Worker-3] image 20 captured
+[2016-02-02 09:22:42,915: WARNING/Worker-3] photo taken
+[2016-02-02 09:22:42,916: WARNING/Worker-3] image 21 captured
+[2016-02-02 09:22:48,159: WARNING/Worker-3] photo taken
+[2016-02-02 09:22:48,160: WARNING/Worker-3] image 22 captured
+[2016-02-02 09:22:53,395: WARNING/Worker-3] photo taken
+[2016-02-02 09:22:53,395: WARNING/Worker-3] image 23 captured
+[2016-02-02 09:22:58,705: WARNING/Worker-3] photo taken
+[2016-02-02 09:22:58,706: WARNING/Worker-3] image 24 captured
+[2016-02-02 09:23:03,940: WARNING/Worker-3] photo taken
+[2016-02-02 09:23:03,940: WARNING/Worker-3] image 25 captured
+[2016-02-02 09:23:09,158: WARNING/Worker-3] photo taken
+[2016-02-02 09:23:09,158: WARNING/Worker-3] image 26 captured
+[2016-02-02 09:23:14,378: WARNING/Worker-3] photo taken
+[2016-02-02 09:23:14,378: WARNING/Worker-3] image 27 captured
+[2016-02-02 09:23:19,596: WARNING/Worker-3] photo taken
+[2016-02-02 09:23:19,597: WARNING/Worker-3] image 28 captured
+[2016-02-02 09:23:24,815: WARNING/Worker-3] photo taken
+[2016-02-02 09:23:24,816: WARNING/Worker-3] image 29 captured
+[2016-02-02 09:23:30,008: WARNING/Worker-3] photo taken
+[2016-02-02 09:23:30,009: WARNING/Worker-3] image 30 captured
+[2016-02-02 09:23:35,251: WARNING/Worker-3] photo taken
+[2016-02-02 09:23:35,252: WARNING/Worker-3] image 31 captured
+[2016-02-02 09:23:40,488: WARNING/Worker-3] photo taken
+[2016-02-02 09:23:40,489: WARNING/Worker-3] image 32 captured
+[2016-02-02 09:23:45,732: WARNING/Worker-3] photo taken
+[2016-02-02 09:23:45,732: WARNING/Worker-3] image 33 captured
+[2016-02-02 09:23:50,917: WARNING/Worker-3] photo taken
+[2016-02-02 09:23:50,918: WARNING/Worker-3] image 34 captured
+[2016-02-02 09:23:56,160: WARNING/Worker-3] photo taken
+[2016-02-02 09:23:56,161: WARNING/Worker-3] image 35 captured
+[2016-02-02 09:24:01,362: WARNING/Worker-3] photo taken
+[2016-02-02 09:24:01,363: WARNING/Worker-3] image 36 captured
+[2016-02-02 09:24:06,580: WARNING/Worker-3] photo taken
+[2016-02-02 09:24:06,581: WARNING/Worker-3] image 37 captured
+[2016-02-02 09:24:11,800: WARNING/Worker-3] photo taken
+[2016-02-02 09:24:11,801: WARNING/Worker-3] image 38 captured
+[2016-02-02 09:24:17,052: WARNING/Worker-3] photo taken
+[2016-02-02 09:24:17,052: WARNING/Worker-3] image 39 captured
+[2016-02-02 09:24:22,328: WARNING/Worker-3] photo taken
+[2016-02-02 09:24:22,329: WARNING/Worker-3] image 40 captured
+[2016-02-02 09:24:27,582: WARNING/Worker-3] photo taken
+[2016-02-02 09:24:27,583: WARNING/Worker-3] image 41 captured
+[2016-02-02 09:24:32,790: WARNING/Worker-3] photo taken
+[2016-02-02 09:24:32,791: WARNING/Worker-3] image 42 captured
+[2016-02-02 09:24:38,027: WARNING/Worker-3] photo taken
+[2016-02-02 09:24:38,028: WARNING/Worker-3] image 43 captured
+[2016-02-02 09:24:43,262: WARNING/Worker-3] photo taken
+[2016-02-02 09:24:43,263: WARNING/Worker-3] image 44 captured
+[2016-02-02 09:24:48,498: WARNING/Worker-3] photo taken
+[2016-02-02 09:24:48,498: WARNING/Worker-3] image 45 captured
+[2016-02-02 09:24:53,707: WARNING/Worker-3] photo taken
+[2016-02-02 09:24:53,708: WARNING/Worker-3] image 46 captured
+[2016-02-02 09:24:58,951: WARNING/Worker-3] photo taken
+[2016-02-02 09:24:58,952: WARNING/Worker-3] image 47 captured
+[2016-02-02 09:25:04,202: WARNING/Worker-3] photo taken
+[2016-02-02 09:25:04,203: WARNING/Worker-3] image 48 captured
+[2016-02-02 09:25:09,439: WARNING/Worker-3] photo taken
+[2016-02-02 09:25:09,439: WARNING/Worker-3] image 49 captured
+[2016-02-02 09:25:14,674: WARNING/Worker-3] photo taken
+[2016-02-02 09:25:14,675: WARNING/Worker-3] image 50 captured
+[2016-02-02 09:25:19,934: WARNING/Worker-3] photo taken
+[2016-02-02 09:25:19,935: WARNING/Worker-3] image 51 captured
+[2016-02-02 09:25:25,153: WARNING/Worker-3] photo taken
+[2016-02-02 09:25:25,154: WARNING/Worker-3] image 52 captured
+[2016-02-02 09:25:30,379: WARNING/Worker-3] photo taken
+[2016-02-02 09:25:30,380: WARNING/Worker-3] image 53 captured
+[2016-02-02 09:25:35,614: WARNING/Worker-3] photo taken
+[2016-02-02 09:25:35,614: WARNING/Worker-3] image 54 captured
+[2016-02-02 09:25:40,868: WARNING/Worker-3] photo taken
+[2016-02-02 09:25:40,868: WARNING/Worker-3] image 55 captured
+[2016-02-02 09:25:46,086: WARNING/Worker-3] photo taken
+[2016-02-02 09:25:46,087: WARNING/Worker-3] image 56 captured
+[2016-02-02 09:25:51,330: WARNING/Worker-3] photo taken
+[2016-02-02 09:25:51,331: WARNING/Worker-3] image 57 captured
+[2016-02-02 09:25:56,557: WARNING/Worker-3] photo taken
+[2016-02-02 09:25:56,558: WARNING/Worker-3] image 58 captured
+[2016-02-02 09:26:01,783: WARNING/Worker-3] photo taken
+[2016-02-02 09:26:01,784: WARNING/Worker-3] image 59 captured
+[2016-02-02 09:26:07,037: WARNING/Worker-3] photo taken
+[2016-02-02 09:26:07,038: WARNING/Worker-3] image 60 captured
+[2016-02-02 09:26:12,230: WARNING/Worker-3] photo taken
+[2016-02-02 09:26:12,231: WARNING/Worker-3] image 61 captured
+[2016-02-02 09:26:17,491: WARNING/Worker-3] photo taken
+[2016-02-02 09:26:17,491: WARNING/Worker-3] image 62 captured
+[2016-02-02 09:26:22,734: WARNING/Worker-3] photo taken
+[2016-02-02 09:26:22,735: WARNING/Worker-3] image 63 captured
+[2016-02-02 09:26:27,977: WARNING/Worker-3] photo taken
+[2016-02-02 09:26:27,978: WARNING/Worker-3] image 64 captured
+[2016-02-02 09:26:33,198: WARNING/Worker-3] photo taken
+[2016-02-02 09:26:33,198: WARNING/Worker-3] image 65 captured
+[2016-02-02 09:26:38,457: WARNING/Worker-3] photo taken
+[2016-02-02 09:26:38,458: WARNING/Worker-3] image 66 captured
+[2016-02-02 09:26:43,684: WARNING/Worker-3] photo taken
+[2016-02-02 09:26:43,684: WARNING/Worker-3] image 67 captured
+[2016-02-02 09:26:48,919: WARNING/Worker-3] photo taken
+[2016-02-02 09:26:48,920: WARNING/Worker-3] image 68 captured
+[2016-02-02 09:26:54,146: WARNING/Worker-3] photo taken
+[2016-02-02 09:26:54,147: WARNING/Worker-3] image 69 captured
+[2016-02-02 09:26:59,381: WARNING/Worker-3] photo taken
+[2016-02-02 09:26:59,382: WARNING/Worker-3] image 70 captured
+[2016-02-02 09:27:04,618: WARNING/Worker-3] photo taken
+[2016-02-02 09:27:04,619: WARNING/Worker-3] image 71 captured
+[2016-02-02 09:27:09,844: WARNING/Worker-3] photo taken
+[2016-02-02 09:27:09,845: WARNING/Worker-3] image 72 captured
+[2016-02-02 09:27:15,071: WARNING/Worker-3] photo taken
+[2016-02-02 09:27:15,072: WARNING/Worker-3] image 73 captured
+[2016-02-02 09:27:20,298: WARNING/Worker-3] photo taken
+[2016-02-02 09:27:20,299: WARNING/Worker-3] image 74 captured
+[2016-02-02 09:27:25,534: WARNING/Worker-3] photo taken
+[2016-02-02 09:27:25,535: WARNING/Worker-3] image 75 captured
+[2016-02-02 09:27:30,761: WARNING/Worker-3] photo taken
+[2016-02-02 09:27:30,762: WARNING/Worker-3] image 76 captured
+[2016-02-02 09:27:35,913: WARNING/Worker-3] photo taken
+[2016-02-02 09:27:35,914: WARNING/Worker-3] image 77 captured
+[2016-02-02 09:27:41,165: WARNING/Worker-3] photo taken
+[2016-02-02 09:27:41,165: WARNING/Worker-3] image 78 captured
+[2016-02-02 09:27:46,416: WARNING/Worker-3] photo taken
+[2016-02-02 09:27:46,417: WARNING/Worker-3] image 79 captured
+[2016-02-02 09:27:51,643: WARNING/Worker-3] photo taken
+[2016-02-02 09:27:51,643: WARNING/Worker-3] image 80 captured
+[2016-02-02 09:27:56,853: WARNING/Worker-3] photo taken
+[2016-02-02 09:27:56,854: WARNING/Worker-3] image 81 captured
+[2016-02-02 09:28:02,131: WARNING/Worker-3] photo taken
+[2016-02-02 09:28:02,132: WARNING/Worker-3] image 82 captured
+[2016-02-02 09:28:07,375: WARNING/Worker-3] photo taken
+[2016-02-02 09:28:07,375: WARNING/Worker-3] image 83 captured
+[2016-02-02 09:28:12,601: WARNING/Worker-3] photo taken
+[2016-02-02 09:28:12,601: WARNING/Worker-3] image 84 captured
+[2016-02-02 09:28:17,778: WARNING/Worker-3] photo taken
+[2016-02-02 09:28:17,779: WARNING/Worker-3] image 85 captured
+[2016-02-02 09:28:22,989: WARNING/Worker-3] photo taken
+[2016-02-02 09:28:22,989: WARNING/Worker-3] image 86 captured
+[2016-02-02 09:28:28,199: WARNING/Worker-3] photo taken
+[2016-02-02 09:28:28,200: WARNING/Worker-3] image 87 captured
+[2016-02-02 09:28:33,436: WARNING/Worker-3] photo taken
+[2016-02-02 09:28:33,436: WARNING/Worker-3] image 88 captured
+[2016-02-02 09:28:38,670: WARNING/Worker-3] photo taken
+[2016-02-02 09:28:38,671: WARNING/Worker-3] image 89 captured
+[2016-02-02 09:28:43,889: WARNING/Worker-3] photo taken
+[2016-02-02 09:28:43,890: WARNING/Worker-3] image 90 captured
+[2016-02-02 09:28:49,124: WARNING/Worker-3] photo taken
+[2016-02-02 09:28:49,125: WARNING/Worker-3] image 91 captured
+[2016-02-02 09:28:54,368: WARNING/Worker-3] photo taken
+[2016-02-02 09:28:54,368: WARNING/Worker-3] image 92 captured
+[2016-02-02 09:28:59,588: WARNING/Worker-3] photo taken
+[2016-02-02 09:28:59,588: WARNING/Worker-3] image 93 captured
+[2016-02-02 09:29:04,814: WARNING/Worker-3] photo taken
+[2016-02-02 09:29:04,815: WARNING/Worker-3] image 94 captured
+[2016-02-02 09:29:10,033: WARNING/Worker-3] photo taken
+[2016-02-02 09:29:10,034: WARNING/Worker-3] image 95 captured
+[2016-02-02 09:29:15,259: WARNING/Worker-3] photo taken
+[2016-02-02 09:29:15,260: WARNING/Worker-3] image 96 captured
+[2016-02-02 09:29:20,469: WARNING/Worker-3] photo taken
+[2016-02-02 09:29:20,470: WARNING/Worker-3] image 97 captured
+[2016-02-02 09:29:25,671: WARNING/Worker-3] photo taken
+[2016-02-02 09:29:25,672: WARNING/Worker-3] image 98 captured
+[2016-02-02 09:29:30,891: WARNING/Worker-3] photo taken
+[2016-02-02 09:29:30,892: WARNING/Worker-3] image 99 captured
+[2016-02-02 09:29:36,141: WARNING/Worker-3] photo taken
+[2016-02-02 09:29:36,141: WARNING/Worker-3] image 100 captured
+[2016-02-02 09:29:41,384: WARNING/Worker-3] photo taken
+[2016-02-02 09:29:41,385: WARNING/Worker-3] image 101 captured
+[2016-02-02 09:29:46,619: WARNING/Worker-3] photo taken
+[2016-02-02 09:29:46,620: WARNING/Worker-3] image 102 captured
+[2016-02-02 09:29:51,838: WARNING/Worker-3] photo taken
+[2016-02-02 09:29:51,839: WARNING/Worker-3] image 103 captured
+[2016-02-02 09:29:56,989: WARNING/Worker-3] photo taken
+[2016-02-02 09:29:56,990: WARNING/Worker-3] image 104 captured
+[2016-02-02 09:30:02,234: WARNING/Worker-3] photo taken
+[2016-02-02 09:30:02,235: WARNING/Worker-3] image 105 captured
+[2016-02-02 09:30:07,452: WARNING/Worker-3] photo taken
+[2016-02-02 09:30:07,453: WARNING/Worker-3] image 106 captured
+[2016-02-02 09:30:12,755: WARNING/Worker-3] photo taken
+[2016-02-02 09:30:12,756: WARNING/Worker-3] image 107 captured
+[2016-02-02 09:30:17,914: WARNING/Worker-3] photo taken
+[2016-02-02 09:30:17,915: WARNING/Worker-3] image 108 captured
+[2016-02-02 09:30:23,157: WARNING/Worker-3] photo taken
+[2016-02-02 09:30:23,158: WARNING/Worker-3] image 109 captured
+[2016-02-02 09:30:28,392: WARNING/Worker-3] photo taken
+[2016-02-02 09:30:28,393: WARNING/Worker-3] image 110 captured
+[2016-02-02 09:30:33,630: WARNING/Worker-3] photo taken
+[2016-02-02 09:30:33,630: WARNING/Worker-3] image 111 captured
+[2016-02-02 09:30:38,823: WARNING/Worker-3] photo taken
+[2016-02-02 09:30:38,823: WARNING/Worker-3] image 112 captured
+[2016-02-02 09:30:44,050: WARNING/Worker-3] photo taken
+[2016-02-02 09:30:44,051: WARNING/Worker-3] image 113 captured
+[2016-02-02 09:30:49,268: WARNING/Worker-3] photo taken
+[2016-02-02 09:30:49,269: WARNING/Worker-3] image 114 captured
+[2016-02-02 09:30:54,486: WARNING/Worker-3] photo taken
+[2016-02-02 09:30:54,487: WARNING/Worker-3] image 115 captured
+[2016-02-02 09:30:59,747: WARNING/Worker-3] photo taken
+[2016-02-02 09:30:59,748: WARNING/Worker-3] image 116 captured
+[2016-02-02 09:31:04,991: WARNING/Worker-3] photo taken
+[2016-02-02 09:31:04,991: WARNING/Worker-3] image 117 captured
+[2016-02-02 09:31:10,401: WARNING/Worker-3] photo taken
+[2016-02-02 09:31:10,401: WARNING/Worker-3] image 118 captured
+[2016-02-02 09:31:15,644: WARNING/Worker-3] photo taken
+[2016-02-02 09:31:15,644: WARNING/Worker-3] image 119 captured
+[2016-02-02 09:31:20,812: WARNING/Worker-3] photo taken
+[2016-02-02 09:31:20,812: WARNING/Worker-3] image 120 captured
+[2016-02-02 09:31:26,047: WARNING/Worker-3] photo taken
+[2016-02-02 09:31:26,048: WARNING/Worker-3] image 121 captured
+[2016-02-02 09:31:31,276: WARNING/Worker-3] photo taken
+[2016-02-02 09:31:31,276: WARNING/Worker-3] image 122 captured
+[2016-02-02 09:31:36,519: WARNING/Worker-3] photo taken
+[2016-02-02 09:31:36,519: WARNING/Worker-3] image 123 captured
+[2016-02-02 09:31:41,712: WARNING/Worker-3] photo taken
+[2016-02-02 09:31:41,712: WARNING/Worker-3] image 124 captured
+[2016-02-02 09:31:46,922: WARNING/Worker-3] photo taken
+[2016-02-02 09:31:46,923: WARNING/Worker-3] image 125 captured
+[2016-02-02 09:31:52,132: WARNING/Worker-3] photo taken
+[2016-02-02 09:31:52,133: WARNING/Worker-3] image 126 captured
+[2016-02-02 09:31:57,300: WARNING/Worker-3] photo taken
+[2016-02-02 09:31:57,300: WARNING/Worker-3] image 127 captured
+[2016-02-02 09:32:02,512: WARNING/Worker-3] photo taken
+[2016-02-02 09:32:02,513: WARNING/Worker-3] image 128 captured
+[2016-02-02 09:32:07,739: WARNING/Worker-3] photo taken
+[2016-02-02 09:32:07,739: WARNING/Worker-3] image 129 captured
+[2016-02-02 09:32:12,907: WARNING/Worker-3] photo taken
+[2016-02-02 09:32:12,908: WARNING/Worker-3] image 130 captured
+[2016-02-02 09:32:18,142: WARNING/Worker-3] photo taken
+[2016-02-02 09:32:18,142: WARNING/Worker-3] image 131 captured
+[2016-02-02 09:32:23,385: WARNING/Worker-3] photo taken
+[2016-02-02 09:32:23,386: WARNING/Worker-3] image 132 captured
+[2016-02-02 09:32:28,637: WARNING/Worker-3] photo taken
+[2016-02-02 09:32:28,638: WARNING/Worker-3] image 133 captured
+[2016-02-02 09:32:33,865: WARNING/Worker-3] photo taken
+[2016-02-02 09:32:33,866: WARNING/Worker-3] image 134 captured
+[2016-02-02 09:32:39,042: WARNING/Worker-3] photo taken
+[2016-02-02 09:32:39,043: WARNING/Worker-3] image 135 captured
+[2016-02-02 09:32:44,252: WARNING/Worker-3] photo taken
+[2016-02-02 09:32:44,252: WARNING/Worker-3] image 136 captured
+[2016-02-02 09:32:49,487: WARNING/Worker-3] photo taken
+[2016-02-02 09:32:49,488: WARNING/Worker-3] image 137 captured
+[2016-02-02 09:32:54,713: WARNING/Worker-3] photo taken
+[2016-02-02 09:32:54,714: WARNING/Worker-3] image 138 captured
+[2016-02-02 09:32:59,923: WARNING/Worker-3] photo taken
+[2016-02-02 09:32:59,924: WARNING/Worker-3] image 139 captured
+[2016-02-02 09:33:05,160: WARNING/Worker-3] photo taken
+[2016-02-02 09:33:05,161: WARNING/Worker-3] image 140 captured
+[2016-02-02 09:33:10,370: WARNING/Worker-3] photo taken
+[2016-02-02 09:33:10,371: WARNING/Worker-3] image 141 captured
+[2016-02-02 09:33:15,605: WARNING/Worker-3] photo taken
+[2016-02-02 09:33:15,606: WARNING/Worker-3] image 142 captured
+[2016-02-02 09:33:20,815: WARNING/Worker-3] photo taken
+[2016-02-02 09:33:20,816: WARNING/Worker-3] image 143 captured
+[2016-02-02 09:33:26,033: WARNING/Worker-3] photo taken
+[2016-02-02 09:33:26,034: WARNING/Worker-3] image 144 captured
+[2016-02-02 09:33:31,245: WARNING/Worker-3] photo taken
+[2016-02-02 09:33:31,246: WARNING/Worker-3] image 145 captured
+[2016-02-02 09:33:36,481: WARNING/Worker-3] photo taken
+[2016-02-02 09:33:36,482: WARNING/Worker-3] image 146 captured
+[2016-02-02 09:33:41,732: WARNING/Worker-3] photo taken
+[2016-02-02 09:33:41,733: WARNING/Worker-3] image 147 captured
+[2016-02-02 09:33:46,926: WARNING/Worker-3] photo taken
+[2016-02-02 09:33:46,927: WARNING/Worker-3] image 148 captured
+[2016-02-02 09:33:52,094: WARNING/Worker-3] photo taken
+[2016-02-02 09:33:52,095: WARNING/Worker-3] image 149 captured
+[2016-02-02 09:33:57,329: WARNING/Worker-3] photo taken
+[2016-02-02 09:33:57,330: WARNING/Worker-3] image 150 captured
+[2016-02-02 09:34:02,594: WARNING/Worker-3] photo taken
+[2016-02-02 09:34:02,594: WARNING/Worker-3] image 151 captured
+[2016-02-02 09:34:07,784: WARNING/Worker-3] photo taken
+[2016-02-02 09:34:07,785: WARNING/Worker-3] image 152 captured
+[2016-02-02 09:34:13,002: WARNING/Worker-3] photo taken
+[2016-02-02 09:34:13,003: WARNING/Worker-3] image 153 captured
+[2016-02-02 09:34:18,229: WARNING/Worker-3] photo taken
+[2016-02-02 09:34:18,230: WARNING/Worker-3] image 154 captured
+[2016-02-02 09:34:23,431: WARNING/Worker-3] photo taken
+[2016-02-02 09:34:23,432: WARNING/Worker-3] image 155 captured
+[2016-02-02 09:34:28,649: WARNING/Worker-3] photo taken
+[2016-02-02 09:34:28,650: WARNING/Worker-3] image 156 captured
+[2016-02-02 09:34:33,869: WARNING/Worker-3] photo taken
+[2016-02-02 09:34:33,869: WARNING/Worker-3] image 157 captured
+[2016-02-02 09:34:39,029: WARNING/Worker-3] photo taken
+[2016-02-02 09:34:39,030: WARNING/Worker-3] image 158 captured
+[2016-02-02 09:34:44,247: WARNING/Worker-3] photo taken
+[2016-02-02 09:34:44,247: WARNING/Worker-3] image 159 captured
+[2016-02-02 09:34:49,457: WARNING/Worker-3] photo taken
+[2016-02-02 09:34:49,458: WARNING/Worker-3] image 160 captured
+[2016-02-02 09:34:54,675: WARNING/Worker-3] photo taken
+[2016-02-02 09:34:54,676: WARNING/Worker-3] image 161 captured
+[2016-02-02 09:34:59,862: WARNING/Worker-3] photo taken
+[2016-02-02 09:34:59,863: WARNING/Worker-3] image 162 captured
+[2016-02-02 09:35:05,097: WARNING/Worker-3] photo taken
+[2016-02-02 09:35:05,098: WARNING/Worker-3] image 163 captured
+[2016-02-02 09:35:10,332: WARNING/Worker-3] photo taken
+[2016-02-02 09:35:10,333: WARNING/Worker-3] image 164 captured
+[2016-02-02 09:35:15,542: WARNING/Worker-3] photo taken
+[2016-02-02 09:35:15,543: WARNING/Worker-3] image 165 captured
+[2016-02-02 09:35:20,768: WARNING/Worker-3] photo taken
+[2016-02-02 09:35:20,769: WARNING/Worker-3] image 166 captured
+[2016-02-02 09:35:26,004: WARNING/Worker-3] photo taken
+[2016-02-02 09:35:26,004: WARNING/Worker-3] image 167 captured
+[2016-02-02 09:35:31,232: WARNING/Worker-3] photo taken
+[2016-02-02 09:35:31,233: WARNING/Worker-3] image 168 captured
+[2016-02-02 09:35:36,459: WARNING/Worker-3] photo taken
+[2016-02-02 09:35:36,459: WARNING/Worker-3] image 169 captured
+[2016-02-02 09:35:41,669: WARNING/Worker-3] photo taken
+[2016-02-02 09:35:41,670: WARNING/Worker-3] image 170 captured
+[2016-02-02 09:35:46,896: WARNING/Worker-3] photo taken
+[2016-02-02 09:35:46,897: WARNING/Worker-3] image 171 captured
+[2016-02-02 09:35:52,147: WARNING/Worker-3] photo taken
+[2016-02-02 09:35:52,148: WARNING/Worker-3] image 172 captured
+[2016-02-02 09:35:57,374: WARNING/Worker-3] photo taken
+[2016-02-02 09:35:57,374: WARNING/Worker-3] image 173 captured
+[2016-02-02 09:36:02,735: WARNING/Worker-3] photo taken
+[2016-02-02 09:36:02,736: WARNING/Worker-3] image 174 captured
+[2016-02-02 09:36:07,970: WARNING/Worker-3] photo taken
+[2016-02-02 09:36:07,971: WARNING/Worker-3] image 175 captured
+[2016-02-02 09:36:13,214: WARNING/Worker-3] photo taken
+[2016-02-02 09:36:13,214: WARNING/Worker-3] image 176 captured
+[2016-02-02 09:36:18,441: WARNING/Worker-3] photo taken
+[2016-02-02 09:36:18,442: WARNING/Worker-3] image 177 captured
+[2016-02-02 09:36:23,609: WARNING/Worker-3] photo taken
+[2016-02-02 09:36:23,610: WARNING/Worker-3] image 178 captured
+[2016-02-02 09:36:28,821: WARNING/Worker-3] photo taken
+[2016-02-02 09:36:28,821: WARNING/Worker-3] image 179 captured
+[2016-02-02 09:36:34,090: WARNING/Worker-3] photo taken
+[2016-02-02 09:36:34,090: WARNING/Worker-3] image 180 captured
+[2016-02-02 09:36:39,341: WARNING/Worker-3] photo taken
+[2016-02-02 09:36:39,342: WARNING/Worker-3] image 181 captured
+[2016-02-02 09:36:44,551: WARNING/Worker-3] photo taken
+[2016-02-02 09:36:44,551: WARNING/Worker-3] image 182 captured
+[2016-02-02 09:36:49,770: WARNING/Worker-3] photo taken
+[2016-02-02 09:36:49,771: WARNING/Worker-3] image 183 captured
+[2016-02-02 09:36:55,122: WARNING/Worker-3] photo taken
+[2016-02-02 09:36:55,123: WARNING/Worker-3] image 184 captured
+[2016-02-02 09:37:00,367: WARNING/Worker-3] photo taken
+[2016-02-02 09:37:00,367: WARNING/Worker-3] image 185 captured
+[2016-02-02 09:37:05,610: WARNING/Worker-3] photo taken
+[2016-02-02 09:37:05,611: WARNING/Worker-3] image 186 captured
+[2016-02-02 09:37:10,829: WARNING/Worker-3] photo taken
+[2016-02-02 09:37:10,830: WARNING/Worker-3] image 187 captured
+[2016-02-02 09:37:16,056: WARNING/Worker-3] photo taken
+[2016-02-02 09:37:16,056: WARNING/Worker-3] image 188 captured
+[2016-02-02 09:37:21,332: WARNING/Worker-3] photo taken
+[2016-02-02 09:37:21,333: WARNING/Worker-3] image 189 captured
+[2016-02-02 09:37:26,585: WARNING/Worker-3] photo taken
+[2016-02-02 09:37:26,586: WARNING/Worker-3] image 190 captured
+[2016-02-02 09:37:31,820: WARNING/Worker-3] photo taken
+[2016-02-02 09:37:31,821: WARNING/Worker-3] image 191 captured
+[2016-02-02 09:37:37,030: WARNING/Worker-3] photo taken
+[2016-02-02 09:37:37,031: WARNING/Worker-3] image 192 captured
+[2016-02-02 09:37:42,249: WARNING/Worker-3] photo taken
+[2016-02-02 09:37:42,250: WARNING/Worker-3] image 193 captured
+[2016-02-02 09:37:47,500: WARNING/Worker-3] photo taken
+[2016-02-02 09:37:47,501: WARNING/Worker-3] image 194 captured
+[2016-02-02 09:37:52,710: WARNING/Worker-3] photo taken
+[2016-02-02 09:37:52,710: WARNING/Worker-3] image 195 captured
+[2016-02-02 09:37:57,939: WARNING/Worker-3] photo taken
+[2016-02-02 09:37:57,940: WARNING/Worker-3] image 196 captured
+[2016-02-02 09:38:03,149: WARNING/Worker-3] photo taken
+[2016-02-02 09:38:03,149: WARNING/Worker-3] image 197 captured
+[2016-02-02 09:38:08,392: WARNING/Worker-3] photo taken
+[2016-02-02 09:38:08,393: WARNING/Worker-3] image 198 captured
+[2016-02-02 09:38:13,619: WARNING/Worker-3] photo taken
+[2016-02-02 09:38:13,620: WARNING/Worker-3] image 199 captured
+[2016-02-02 09:38:18,853: WARNING/Worker-3] photo taken
+[2016-02-02 09:38:18,854: WARNING/Worker-3] image 200 captured
+[2016-02-02 09:38:24,030: WARNING/Worker-3] photo taken
+[2016-02-02 09:38:24,031: WARNING/Worker-3] image 201 captured
+[2016-02-02 09:38:29,217: WARNING/Worker-3] photo taken
+[2016-02-02 09:38:29,218: WARNING/Worker-3] image 202 captured
+[2016-02-02 09:39:39,436: WARNING/Worker-3] photo taken
+[2016-02-02 09:39:39,437: WARNING/Worker-3] image 203 captured
+[2016-02-02 09:39:44,672: WARNING/Worker-3] photo taken
+[2016-02-02 09:39:44,673: WARNING/Worker-3] image 204 captured
+[2016-02-02 09:39:49,907: WARNING/Worker-3] photo taken
+[2016-02-02 09:39:49,908: WARNING/Worker-3] image 205 captured
+[2016-02-02 09:39:55,122: WARNING/Worker-3] photo taken
+[2016-02-02 09:39:55,123: WARNING/Worker-3] image 206 captured
+[2016-02-02 09:40:00,265: WARNING/Worker-3] photo taken
+[2016-02-02 09:40:00,266: WARNING/Worker-3] image 207 captured
+[2016-02-02 09:40:05,484: WARNING/Worker-3] photo taken
+[2016-02-02 09:40:05,484: WARNING/Worker-3] image 208 captured
+[2016-02-02 09:40:10,757: WARNING/Worker-3] photo taken
+[2016-02-02 09:40:10,758: WARNING/Worker-3] image 209 captured
+[2016-02-02 09:40:15,920: WARNING/Worker-3] photo taken
+[2016-02-02 09:40:15,920: WARNING/Worker-3] image 210 captured
+[2016-02-02 09:40:21,122: WARNING/Worker-3] photo taken
+[2016-02-02 09:40:21,122: WARNING/Worker-3] image 211 captured
+[2016-02-02 09:40:26,352: WARNING/Worker-3] photo taken
+[2016-02-02 09:40:26,352: WARNING/Worker-3] image 212 captured
+[2016-02-02 09:40:31,537: WARNING/Worker-3] photo taken
+[2016-02-02 09:40:31,538: WARNING/Worker-3] image 213 captured
+[2016-02-02 09:40:36,801: WARNING/Worker-3] photo taken
+[2016-02-02 09:40:36,801: WARNING/Worker-3] image 214 captured
+[2016-02-02 09:40:41,988: WARNING/Worker-3] photo taken
+[2016-02-02 09:40:41,988: WARNING/Worker-3] image 215 captured
+[2016-02-02 09:40:47,210: WARNING/Worker-3] photo taken
+[2016-02-02 09:40:47,210: WARNING/Worker-3] image 216 captured
+[2016-02-02 09:40:52,479: WARNING/Worker-3] photo taken
+[2016-02-02 09:40:52,480: WARNING/Worker-3] image 217 captured
+[2016-02-02 09:40:57,741: WARNING/Worker-3] photo taken
+[2016-02-02 09:40:57,742: WARNING/Worker-3] image 218 captured
+[2016-02-02 09:41:03,001: WARNING/Worker-3] photo taken
+[2016-02-02 09:41:03,001: WARNING/Worker-3] image 219 captured
+[2016-02-02 09:41:08,211: WARNING/Worker-3] photo taken
+[2016-02-02 09:41:08,212: WARNING/Worker-3] image 220 captured
+[2016-02-02 09:41:13,481: WARNING/Worker-3] photo taken
+[2016-02-02 09:41:13,482: WARNING/Worker-3] image 221 captured
+[2016-02-02 09:41:18,701: WARNING/Worker-3] photo taken
+[2016-02-02 09:41:18,701: WARNING/Worker-3] image 222 captured
+[2016-02-02 09:41:23,969: WARNING/Worker-3] photo taken
+[2016-02-02 09:41:23,970: WARNING/Worker-3] image 223 captured
+[2016-02-02 09:41:29,230: WARNING/Worker-3] photo taken
+[2016-02-02 09:41:29,231: WARNING/Worker-3] image 224 captured
+[2016-02-02 09:41:34,415: WARNING/Worker-3] photo taken
+[2016-02-02 09:41:34,416: WARNING/Worker-3] image 225 captured
+[2016-02-02 09:41:39,683: WARNING/Worker-3] photo taken
+[2016-02-02 09:41:39,684: WARNING/Worker-3] image 226 captured
+[2016-02-02 09:41:44,837: WARNING/Worker-3] photo taken
+[2016-02-02 09:41:44,838: WARNING/Worker-3] image 227 captured
+[2016-02-02 09:41:50,090: WARNING/Worker-3] photo taken
+[2016-02-02 09:41:50,090: WARNING/Worker-3] image 228 captured
+[2016-02-02 09:41:55,286: WARNING/Worker-3] photo taken
+[2016-02-02 09:41:55,287: WARNING/Worker-3] image 229 captured
+[2016-02-02 09:42:00,524: WARNING/Worker-3] photo taken
+[2016-02-02 09:42:00,524: WARNING/Worker-3] image 230 captured
+[2016-02-02 09:42:05,753: WARNING/Worker-3] photo taken
+[2016-02-02 09:42:05,754: WARNING/Worker-3] image 231 captured
+[2016-02-02 09:42:10,980: WARNING/Worker-3] photo taken
+[2016-02-02 09:42:10,981: WARNING/Worker-3] image 232 captured
+[2016-02-02 09:42:16,186: WARNING/Worker-3] photo taken
+[2016-02-02 09:42:16,186: WARNING/Worker-3] image 233 captured
+[2016-02-02 09:42:21,405: WARNING/Worker-3] photo taken
+[2016-02-02 09:42:21,406: WARNING/Worker-3] image 234 captured
+[2016-02-02 09:42:26,640: WARNING/Worker-3] photo taken
+[2016-02-02 09:42:26,641: WARNING/Worker-3] image 235 captured
+[2016-02-02 09:42:31,902: WARNING/Worker-3] photo taken
+[2016-02-02 09:42:31,903: WARNING/Worker-3] image 236 captured
+[2016-02-02 09:42:37,105: WARNING/Worker-3] photo taken
+[2016-02-02 09:42:37,105: WARNING/Worker-3] image 237 captured
+[2016-02-02 09:42:42,241: WARNING/Worker-3] photo taken
+[2016-02-02 09:42:42,242: WARNING/Worker-3] image 238 captured
+[2016-02-02 09:42:47,476: WARNING/Worker-3] photo taken
+[2016-02-02 09:42:47,476: WARNING/Worker-3] image 239 captured
+[2016-02-02 09:42:52,705: WARNING/Worker-3] photo taken
+[2016-02-02 09:42:52,705: WARNING/Worker-3] image 240 captured
+[2016-02-02 09:42:57,965: WARNING/Worker-3] photo taken
+[2016-02-02 09:42:57,965: WARNING/Worker-3] image 241 captured
+[2016-02-02 09:43:03,141: WARNING/Worker-3] photo taken
+[2016-02-02 09:43:03,142: WARNING/Worker-3] image 242 captured
+[2016-02-02 09:43:08,318: WARNING/Worker-3] photo taken
+[2016-02-02 09:43:08,318: WARNING/Worker-3] image 243 captured
+[2016-02-02 09:43:13,528: WARNING/Worker-3] photo taken
+[2016-02-02 09:43:13,529: WARNING/Worker-3] image 244 captured
+[2016-02-02 09:43:18,797: WARNING/Worker-3] photo taken
+[2016-02-02 09:43:18,798: WARNING/Worker-3] image 245 captured
+[2016-02-02 09:43:24,034: WARNING/Worker-3] photo taken
+[2016-02-02 09:43:24,034: WARNING/Worker-3] image 246 captured
+[2016-02-02 09:43:29,344: WARNING/Worker-3] photo taken
+[2016-02-02 09:43:29,345: WARNING/Worker-3] image 247 captured
+[2016-02-02 09:43:34,613: WARNING/Worker-3] photo taken
+[2016-02-02 09:43:34,614: WARNING/Worker-3] image 248 captured
+[2016-02-02 09:43:39,832: WARNING/Worker-3] photo taken
+[2016-02-02 09:43:39,834: WARNING/Worker-3] image 249 captured
+[2016-02-02 09:43:42,837: WARNING/Worker-3] /home/gerrard/code/python/gawdit/static/media/timelapse_video/straw/
+[2016-02-02 09:43:47,244: WARNING/Worker-3] video complete
+[2016-02-02 09:43:47,424: INFO/MainProcess] Task timelapse.tasks.timelapse_capture[a8f49c23-501c-4364-bc37-660d89e2e047] succeeded in 1314.77223548s: None

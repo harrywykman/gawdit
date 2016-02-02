@@ -47,7 +47,7 @@ def push_timelapse(request, pk):
 @login_required
 def capture_img(request, pk):
     project = get_object_or_404(TimelapseProject, pk=pk)
-    capture_image.delay(project, project.number_frames)
+    rpi_capture_image.delay(project, project.number_frames)
     messages.success(request, """ Ran capture Image.""" )
     return HttpResponseRedirect(reverse('timelapse:timelapse_detail', args=(project.pk,)))
 

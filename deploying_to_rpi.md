@@ -9,10 +9,15 @@
 
 
 `cd /usr/local/src`
+
 `wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz`
+
 `tar xzf noip-duc-linux.tar.gz`
+
 `cd noip-2.1.9-1`
+
 `make`
+
 `make install`
 
 `vim /etc/init.d/noip2`
@@ -50,9 +55,32 @@
 
     exit 0
 
+`sudo chmod + x /etc/init.d/noip2`
+`sudo update-rc.d noip2 defaults`
 
 
 `fab all`  # in mezzanine app virtualenv
 
+# Probably don't need to complie ffmpeg - just install from deb multimedia
+
+`cd /usr/src`
+
+`sudo mkdir ffmpeg`
+
+`sudo chown pi:users ffmpeg`
+
+`sudo git clone git://source.ffmpeg.org/ffmpeg.git ffmpeg`
+
+`cd ffmpeg`
+
+`sudo ./configure`
+
+`sudo make`
+
+`sudo make install`
 
 `sudo apt-get install rabbitmq-server`
+
+# added debian multimedia repo
+
+`sudo apt-get install libav-tools libx264-dev`

@@ -26,7 +26,7 @@ CLIENT_SECRET = 'awXefnxEBjMZ67nW61JpNv0h2MZis4/m2X4ld8sNCJAWcyf1o1rvG+FXIrNiigt
 PROJECT = "sleeping"
 FRAMES = 25
 FILETYPE = "jpg"
-INTERVAL = 20 
+INTERVAL = 20
 NUMBER_FRAMES = 1440
 IMAGE_PATH = "%s/timelapse_images/" % (settings.MEDIA_ROOT)
 VIDEO_PATH = "%s/timelapse_video/" % (settings.MEDIA_ROOT)
@@ -67,6 +67,39 @@ def capture_image(project, number):
     ti.save()
     print "photo taken"
 
+@shared_task
+def rpi_capture_image(project, number):
+    """
+    capture image from camera
+    """
+    import picamera
+    #now = datetime.datetime.now()
+    #now_str = now.strftime('%Y%m%d:%H:%M:%S')
+    #print now_str
+    name = project.name
+    #print name
+    if not os.path.exists(IMAGE_PATH):
+        call(["mkdir", IMAGE_PATH])
+    image_number = str(number).zfill(7)
+    path = "%s%s/" % (IMAGE_PATH, name)
+    call(["mkdir", path])
+    filename = "%s_%s.jpg" % (name, image_number)
+    #call(["fswebcam", "-r", "1280x720", "--no-banner", "%s%s" % (path, filename)])
+    with picamera.PiCamera() as camera:
+        camera.resolution = (1280, 720)
+        camera.start_preview()
+        camera.exposure_compensation = 2
+        camera.exposure_mode = 'spotlight'
+        camera.meter_mode = 'matrix'
+            camera.image_effect = 'gpen'
+            # Give the camera some time to adjust to conditions
+            time.sleep(2)
+            camera.capture("%s%s" % (path, filename))
+            camera.stop_preview()
+    image = File(open('%s%s' % (path, filename), 'r'))
+    ti = TimelapseImage(name=name, image=image, timelapse=project)
+    ti.save()
+    print "photo taken"
 
 @shared_task
 def capture_timelapse(project):
@@ -125,13 +158,13 @@ def push_to_vimeo(project):
     print set_remote_video_title(ACCESS_TOKEN, uri, project.name)
 
 @shared_task
-def set_remote_video_title(access_token, video_uri, title):                                                         
-    payload = {'name': title}                                                                                       
-    video_full_url = "https://api.vimeo.com%s" % (video_uri)                                                        
-    print "Set video title. Url is %s and payload is %s" % (video_full_url, payload)                                
-    #print "Setting access_token %s in the Authorization header" % access_token                                     
-    auth_headers = {'Authorization': 'Bearer ' + access_token}                                                      
-    print auth_headers                                                                                              
+def set_remote_video_title(access_token, video_uri, title):
+    payload = {'name': title}
+    video_full_url = "https://api.vimeo.com%s" % (video_uri)
+    print "Set video title. Url is %s and payload is %s" % (video_full_url, payload)
+    #print "Setting access_token %s in the Authorization header" % access_token
+    auth_headers = {'Authorization': 'Bearer ' + access_token}
+    print auth_headers
     return requests.patch("https://api.vimeo.com%s" % (video_uri), data=payload, headers=auth_headers)
 
 @shared_task
@@ -141,8 +174,8 @@ def timelapse_capture(project):
 
 @shared_task
 def timelapse_capture_push(project):
-    capture_timelapse(project)                                                                         
-    create_timelapse_video(project)                                                                    
-    push_to_vimeo(project) 
+    capture_timelapse(project)
+    create_timelapse_video(project)
+    push_to_vimeo(project)
 
 
