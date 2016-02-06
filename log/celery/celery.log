@@ -1487,3 +1487,41 @@ IOError: [Errno 2] No such file or directory: u'/home/gerrard/code/python/gawdit
 [2016-02-02 09:43:42,837: WARNING/Worker-3] /home/gerrard/code/python/gawdit/static/media/timelapse_video/straw/
 [2016-02-02 09:43:47,244: WARNING/Worker-3] video complete
 [2016-02-02 09:43:47,424: INFO/MainProcess] Task timelapse.tasks.timelapse_capture[a8f49c23-501c-4364-bc37-660d89e2e047] succeeded in 1314.77223548s: None
+[2016-02-06 13:54:40,784: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-02-06 13:54:42,024: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-02-06 13:54:42,426: INFO/MainProcess] mingle: searching for neighbors
+[2016-02-06 13:54:44,328: INFO/MainProcess] mingle: all alone
+[2016-02-06 13:54:44,410: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-02-06 13:54:44,411: WARNING/MainProcess] celery@arcadia ready.
+[2016-02-06 13:55:43,161: INFO/MainProcess] Received task: timelapse.tasks.push_to_vimeo[1ab99916-e405-47ba-8df6-fc50101184ac]
+[2016-02-06 13:55:43,164: WARNING/Worker-4] /home/gerrard/code/python/gawdit/static/media/timelapse_video/straw/straw.mp4
+[2016-02-06 13:55:43,167: INFO/Worker-4] Starting new HTTPS connection (1): api.vimeo.com
+[2016-02-06 13:55:43,688: INFO/Worker-4] Starting new HTTP connection (1): 1511920575.cloud.vimeo.com
+[2016-02-06 13:55:50,686: INFO/Worker-4] Starting new HTTP connection (1): 1511920575.cloud.vimeo.com
+[2016-02-06 13:55:50,900: INFO/Worker-4] Starting new HTTPS connection (1): api.vimeo.com
+[2016-02-06 13:55:51,549: WARNING/Worker-4] Set video title. Url is https://api.vimeo.com/videos/154429758 and payload is {'name': u'straw'}
+[2016-02-06 13:55:51,549: WARNING/Worker-4] {'Authorization': 'Bearer 99de9beecdc80a53d56f2731a00cf7fb'}
+[2016-02-06 13:55:51,568: INFO/Worker-4] Starting new HTTPS connection (1): api.vimeo.com
+[2016-02-06 13:55:51,961: WARNING/Worker-4] <Response [200]>
+[2016-02-06 13:55:52,177: INFO/MainProcess] Task timelapse.tasks.push_to_vimeo[1ab99916-e405-47ba-8df6-fc50101184ac] succeeded in 9.01339411101s: None

@@ -9,6 +9,22 @@ from embed_video.fields import EmbedVideoField
 
 VIDEO_PATH = "%s/timelapse_video/" % (settings.MEDIA_ROOT)
 
+class Camera(models.Model):
+
+    class Meta:
+        abstract = True
+
+    def capture_image(filename, resolution, ):
+        pass
+
+class RPICamera(Camera):
+    pass
+
+class WebCamera(Camera):
+    pass
+
+
+
 class TimelapseProject(models.Model):
     date_created = models.DateTimeField('date project created', default=timezone.now)
     name = models.CharField(max_length=100, unique=True)

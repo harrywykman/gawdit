@@ -7,7 +7,7 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 
 from timelapse.models import TimelapseProject, TimelapseImage, TimelapseVideo
-from timelapse.tasks import (capture_image, capture_timelapse,
+from timelapse.tasks import (rpi_capture_image, capture_image, capture_timelapse,
         create_timelapse_video, push_to_vimeo, timelapse_capture_push, timelapse_capture)
 
 @login_required

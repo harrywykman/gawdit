@@ -19,6 +19,8 @@ from .models import (
                     TimelapseProject, TimelapseImage, TimelapseVideo
                     )
 
+RPI = True
+
 #ACCESS_TOKEN = '35f21bf2ac2d194b3d3354fb67ced684'
 ACCESS_TOKEN = '99de9beecdc80a53d56f2731a00cf7fb' # public private purchased create edit delete interact upload
 CLIENT_ID = 'a0252bed7f0d5917db154ec54ad95e2a19fdd8c0'
@@ -50,22 +52,25 @@ def capture_image(project, number):
     """
     capture image from camera
     """
-    #now = datetime.datetime.now()
-    #now_str = now.strftime('%Y%m%d:%H:%M:%S')
-    #print now_str
-    name = project.name
-    #print name
-    if not os.path.exists(IMAGE_PATH):
-        call(["mkdir", IMAGE_PATH])
-    image_number = str(number).zfill(7)
-    path = "%s%s/" % (IMAGE_PATH, name)
-    call(["mkdir", path])
-    filename = "%s_%s.jpg" % (name, image_number)
-    call(["fswebcam", "-r", "1280x720", "--no-banner", "%s%s" % (path, filename)])
-    image = File(open('%s%s' % (path, filename), 'r'))
-    ti = TimelapseImage(name=name, image=image, timelapse=project)
-    ti.save()
-    print "photo taken"
+    if RPI:
+        rpi_capture_image(project, numer)
+    else:
+        #now = datetime.datetime.now()
+        #now_str = now.strftime('%Y%m%d:%H:%M:%S')
+        #print now_str
+        name = project.name
+        #print name
+        if not os.path.exists(IMAGE_PATH):
+            call(["mkdir", IMAGE_PATH])
+        image_number = str(number).zfill(7)
+        path = "%s%s/" % (IMAGE_PATH, name)
+        call(["mkdir", path])
+        filename = "%s_%s.jpg" % (name, image_number)
+        call(["fswebcam", "-r", "1280x720", "--no-banner", "%s%s" % (path, filename)])
+        image = File(open('%s%s' % (path, filename), 'r'))
+        ti = TimelapseImage(name=name, image=image, timelapse=project)
+        ti.save()
+        print "photo taken"
 
 @shared_task
 def rpi_capture_image(project, number):
