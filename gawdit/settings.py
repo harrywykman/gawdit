@@ -144,7 +144,7 @@ DATABASES = {
         # DB name or path to database file if using sqlite3.
         "NAME": "gawdit_proudhon",
         # Not used with sqlite3.
-        "USER": "gerrard",
+        "USER": "gawdit",
         # Not used with sqlite3.
         "PASSWORD": "lasumision",
         # Set to empty string for localhost. Not used with sqlite3.
