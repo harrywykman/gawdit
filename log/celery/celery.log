@@ -1525,3 +1525,30 @@ You must only enable the serializers that you will actually use.
 [2016-02-06 13:55:51,568: INFO/Worker-4] Starting new HTTPS connection (1): api.vimeo.com
 [2016-02-06 13:55:51,961: WARNING/Worker-4] <Response [200]>
 [2016-02-06 13:55:52,177: INFO/MainProcess] Task timelapse.tasks.push_to_vimeo[1ab99916-e405-47ba-8df6-fc50101184ac] succeeded in 9.01339411101s: None
+[2016-02-18 21:03:22,239: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/apps/worker.py:162: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+
+[2016-02-18 21:03:23,392: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2016-02-18 21:03:23,620: INFO/MainProcess] mingle: searching for neighbors
+[2016-02-18 21:03:25,517: INFO/MainProcess] mingle: all alone
+[2016-02-18 21:03:25,642: WARNING/MainProcess] /home/gerrard/.virtualenvs/gawdit_dev/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+
+[2016-02-18 21:03:25,642: WARNING/MainProcess] celery@arcadia ready.

@@ -55,7 +55,7 @@
 
     exit 0
 
-`sudo chmod + x /etc/init.d/noip2`
+`sudo chmod +x /etc/init.d/noip2`
 `sudo update-rc.d noip2 defaults`
 
 

@@ -53,7 +53,7 @@ def capture_image(project, number):
     capture image from camera
     """
     if RPI:
-        rpi_capture_image(project, numer)
+        rpi_capture_image(project, number)
     else:
         #now = datetime.datetime.now()
         #now_str = now.strftime('%Y%m%d:%H:%M:%S')
@@ -93,11 +93,6 @@ def rpi_capture_image(project, number):
     with picamera.PiCamera() as camera:
         camera.resolution = (1280, 720)
         camera.start_preview()
-        camera.exposure_compensation = 2
-        camera.exposure_mode = 'spotlight'
-        camera.meter_mode = 'matrix'
-        camera.image_effect = 'gpen'
-        # Give the camera some time to adjust to conditions
         time.sleep(2)
         camera.capture("%s%s" % (path, filename))
         camera.stop_preview()

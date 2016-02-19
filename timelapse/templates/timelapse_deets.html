@@ -23,6 +23,20 @@
 {% endblock %}
 
 {% block main %}
+
+{% if project.video_file_exists %}
+
+    <h2>Local Video</h2>                                                                                 
+    <video class="embed-responsive" width="100%" controls>                                
+        <source src="{{ MEDIA_URL }}/timelapse_video/{{project.name}}/{{project.name}}.mp4" type="video/mp4">                                                                                         
+    Your browser does not support the video tag.                                                   
+    </video>                                                                                       
+
+{% else %}                                                                                         
+    <h2>Local Video</h2>                                                                                 
+    <p>No Video.</p>                                                                               
+{% endif %}
+
 {% if project.video %}
 
     {% for vid in project.video %}
@@ -31,7 +45,7 @@
     {% endfor %}
 {% else %}
     <h2>Video</h2>
-    <p>No Video.</p>
+    <p>No Hosted Video.</p>
 {% endif %}
 
 {% if project.latest_image %}
